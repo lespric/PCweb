@@ -515,8 +515,7 @@ body {
 #home footer .col-md:first-child h5 {
     margin-bottom: 4em;
 }
-#home footer .col-md:first-child span:not(:last-child):after {
-    content: "";
+#home footer .col-md:first-child .divider {
     margin: 0 1em;
     
     height: .4em;
@@ -529,9 +528,9 @@ body {
 #home footer .col-md:nth-child(2) span {
     margin-right: 2.25em;
 }
-#home footer .col-md:nth-child(2) span:hover {
+#home footer .col-md span:hover {
     border-bottom: .2em solid #FFF;
-} /* 定义页脚的旗下网站的列布局及悬浮时样式 */
+} /* 定义页脚的旗下网站的列布局及文本悬浮时样式 */
 
 #home footer .col-md:last-child h5 {
     margin-bottom: .05em;
