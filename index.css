@@ -1,3 +1,560 @@
-.btn {
-    font-size: 1.6em;
+@media all and (orientation: portrait) {
+  @media (min-device-width: 980px) {
+    html {
+      font-size: 1rem;
+    }
+  } /* 竖屏电脑 */
+  @media (min-device-width: 768px) and (max-device-width: 979px) {
+    html {
+      font-size: 1rem;
+    }
+  } /* 竖屏平板 */
+  @media (max-device-width: 767px) {
+    html {
+      font-size: 1rem;
+    }
+  } /* 竖屏手机 */
 }
+
+@media all and (orientation: landscape) {
+  @media (min-device-width: 1024px) {
+    html  {
+      font-size: 2rem;
+    }
+  } /*横屏网页 */
+  @media (max-device-width: 1023px) {
+    html {
+      font-size: 1rem;
+    }
+  }
+} /* 横屏手机 */
+
+body {
+  margin: 0;
+  padding: 0;
+ 
+  font-size: 0.625rem;
+  font-family: "MicrosoftYaHei", sans-serif;
+
+  background-color: #fafafa;
+} /* 定义全局样式 */
+
+#home header {
+  padding: 0 18.75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 1em;
+  color: #29b078;
+
+  background-color: #FFF;
+} /* 定义顶部的样式 */
+
+#home header .phone {
+  font-size: .4em;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#home header a {
+  color: #29b078;
+} /* 定义联系电话的样式 */
+
+#home .btn-group .btn {
+  margin-left: .4em;
+  padding: 0;
+
+  width: .6em;
+  height: .6em;
+
+  border-radius: 0.1em;
+}
+#home .btn-group .btn:first-child {
+  background: url(../PCweb/img/QQ@3x.png) no-repeat;
+  background-size: cover;
+}
+#home .btn-group .btn:nth-child(2) {
+  background: url(../PCweb/img/wechat@3x.png) no-repeat;
+  background-size: cover;
+}
+#home .btn-group .btn:last-child {
+  background: url(../PCweb/img/sina@3x.png) no-repeat;
+  background-size: cover;
+} /* 定义按钮组的样式 */
+
+#home nav {
+    padding: 0;
+    padding-left: 62%;
+ 
+    background-color: #29B078;
+    box-shadow: 0 0 .1em rgba(8, 1, 3, 0.15);
+} /* 定义导航栏的样式 */
+#home nav .navbar-toggler {
+    margin: .25em;
+    padding: 0;
+    margin-left: auto;
+    margin-right: .25em;
+
+    width: 2.5em;
+    height: 2em;
+
+    font-size: 1em;
+} /* 定义折叠按钮的样式 */
+
+#navbarNav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 2.5em;
+    height: 2.5em;
+}
+#navbarNav .nav-item .nav-link{
+    padding: 0;
+
+    font-size: .4em;
+    color: #FFF;
+} /* 定义导航栏的字体样式 */
+
+#navbarNav .nav-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    
+    width: 0;
+    height: 100%;
+
+    border-bottom: .1em solid #FFF;
+    -webkit-transition: 0.2s all linear;
+    transition: 0.2s all linear;
+} /* 定义导航栏的下划线 */
+#navbarNav .nav-item:hover:before {
+    left: 0; /*鼠标滑过时，下划线从右向左移动*/
+    width: 100%; /*同时，下划线宽度从0-100%*/
+}
+#navbarNav .nav-item:hover ~ .nav-item:before { /*~ 选择器：查找指定元素后面的所有兄弟结点*/
+    left: 0; /*处于hover后面元素的下划线从左侧开始显示*/
+} /* 定义下划线的滑动方向 */
+
+#banner .carousel-indicators {
+    margin-bottom: .6em;
+}
+#banner .carousel-indicators li{
+    width: .4em;
+    height: .4em;
+
+    border-radius: 50%;
+    background: none;
+    border: 1px solid #FFF;
+}
+#banner .carousel-indicators .active{
+    background-color: #FFF;
+} /* 定义banner轮播图指标的样式 */
+
+#banner .carousel-control-prev {
+    left: 6%;
+}
+#banner .carousel-control-next {
+    right: 6%;
+} /* 定义banner轮播图的翻页按钮 */
+
+#content {
+    padding: 0 18.75%;
+} /* 定义内容区的边距 */
+
+#feature {
+    margin-top: 2.2em;
+}
+#feature .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.2em;
+    
+    background: none;
+    border: none;
+} /* 定义特点区和卡片的布局 */
+
+#feature .card-img-top {
+    width: 1.6em;
+    height: 1.6em;
+}
+#feature .card:first-child .card-img-top {
+    background: url(../PCweb/img/rocket@3x.png) no-repeat center;
+    background-size: 1.1em 1.6em;
+}
+#feature .card:nth-child(2) .card-img-top {
+    background: url(../PCweb/img/archive@3x.png) no-repeat center;
+    background-size: 1.5em 1.3em;
+}
+#feature .card:nth-child(3) .card-img-top {
+    background: url(../PCweb/img/Shape@3x.png) no-repeat center;
+    background-size: 1.3em 1.4em;
+} /* 定义特点区的卡片图片的样式 */
+
+#feature .card-body {
+    padding: 0;
+
+    width: 5.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#feature .card-body .card-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 2em;
+
+    font-size: .5em;
+    color: #333;
+}
+#feature .card-body .card-text {
+    margin-top: 2em;
+    padding: 0;
+    
+    font-size: .4em;
+    color: #999;
+    letter-spacing: 0.5;
+} /* 定义特点区的卡片文本的布局和样式 */
+
+#feature .col-md:last-child {
+    margin-top: 2.2em;
+    padding-left: 1.4em;
+    display: flex;
+    align-items: center;
+
+    height: 6.6em;
+    border-left: 1px dashed #DEDEDE
+}
+#feature .col-md:last-child .icon{
+    display: inline-block;
+    width: .6em;
+    height: .6em;
+
+    background: url(../PCweb/img/user@3x.png) no-repeat;
+    background-size: cover;
+}
+#feature .col-md:last-child .row {
+    display: flex;
+    flex-direction: column;
+}
+#feature .col-md:last-child .row:first-child {
+    margin-bottom: .8em;
+} 
+#feature .col-md:last-child h5 {
+    margin-bottom: 1em;
+
+    font-size: .5em;
+    color: #26A26F;
+}
+#feature .col-md:last-child p {
+    margin-bottom: 0;
+
+    font-size: .5em;
+    color: #999;
+} /* 定义特点区的人数显示样式 */
+
+#steps h4 {
+    margin-top: 5em;
+    margin-bottom: 0;
+
+    font-size: .5em;
+    color: #333;
+} /* 定义步骤区的标题 */
+#steps .row {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    margin-bottom: 1.1em;
+} /* 定义步骤区的文本行样式 */
+#steps .col-md {
+    display: flex;
+    align-items: center;
+
+    margin-top: 1.4em;
+    padding: 0;
+}
+#steps .numb {
+    width: 3.6em;
+    height: 3.6em;
+
+    font-size: .5em;
+    color: #29B078;
+    line-height: 3.6em;
+
+    border-radius: 50%;
+    box-shadow: 0 0 .2em rgba(8, 1, 3, 0.15);
+    background-color: #FFF;
+}
+#steps .text {
+    margin-left: 1em;
+    width: 10em;
+    
+    font-size: .4em;
+    color: #999;
+} /* 定义步骤区每个步骤的样式 */
+#steps .arrow {
+    margin-top: 1.4em;
+    width: .7em;
+    height: .7em;
+
+    background: url(../PCweb/img/arrow@3x.png) no-repeat center;;
+    background-size: .7em .7em;
+}
+
+#students h4 {
+    margin-top: 6em;
+    margin-bottom: 3.6em;
+
+    font-size: .5em;
+    color: #333;
+} /* 定义学员展示区的标题 */
+
+
+#students .card,
+#students .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#students .card {
+    margin: 0 .5em;
+} /* 定义学员展示区的卡片布局 */
+
+#students .card-img-top{
+    width: 3.2em;
+    height: 3.2em;
+}
+#students .card:first-child .card-img-top {
+    background: url(../PCweb/img/head1@3x.png) no-repeat;
+    background-size: cover;
+}
+#students .card:nth-child(2) .card-img-top {
+    background: url(../PCweb/img/head2@3x.png) no-repeat;
+    background-size: cover;
+}
+#students .card:nth-child(3) .card-img-top {
+    background: url(../PCweb/img/head3@3x.png) no-repeat;
+    background-size: cover;
+}
+#students .card:last-child .card-img-top {
+    background: url(../PCweb/img/head4@3x.png) no-repeat;
+    background-size: cover;
+} /* 定义学员展示区的卡片图片 */
+
+#students .card-body {
+    padding: 1em .8em;
+}
+#students .card-title {
+    margin-bottom: 1.4em;
+    font-size: .5em;
+    color: #333;
+}
+#students .card-text {
+    font-size: .4em;
+    color: #999;
+} /* 定义学员展示区的卡片文本 */
+
+#students .carousel-indicators {
+    height: .4em;
+    margin-bottom: -1em;
+}
+#students .carousel-indicators li {
+    width: .4em;
+    height: .4em;
+    
+    border: none;
+    border-radius: 50%;
+    background-color: #FFF;
+    box-shadow: 0 0 0.2em rgba(8, 1, 3, 0.15);
+}
+#students .carousel-indicators .active {
+    background-color: #29B078;
+} /* 定义学员展示区的轮播指示的样式 */
+
+#business h4 {
+    margin-top: 8em;
+    margin-bottom: 3.4em;
+
+    font-size: .5em;
+    color: #333;
+} /* 定义合作企业区的标题 */
+
+#business .row {
+    margin: 0;
+}
+#business .card { 
+   padding: 0;
+
+   border: none;
+   border-radius: .1em;
+   box-shadow: 0 0 .3em rgba(8, 1, 3, 0.1);
+} /* 定义合作企业区的卡片布局 */
+#business .card:hover {
+    box-shadow: 0 0 .5em rgba(8, 1, 3, 0.3);
+    z-index: 1;
+} /* 定义合作企业区的卡片悬浮状态 */
+
+#business .card .card-img-top{
+   width: 6em;
+   height: 4.4em;
+}
+#business .card:first-child .card-img-top {
+    background: url(../PCweb/img/alibaba@3x.png) no-repeat;
+    background-size: cover;
+}
+#business .card:nth-child(2) .card-img-top {
+    background: url(../PCweb/img/jinshanyun@3x.png) no-repeat;
+    background-size: cover;
+}
+#business .card:nth-child(3) .card-img-top {
+    background: url(../PCweb/img/huanxin@3x.png) no-repeat;
+    background-size: cover;
+}
+#business .card:nth-child(4) .card-img-top {
+    background: url(../PCweb/img/ronglian@2x.png) no-repeat;
+    background-size: cover;
+}
+#business .card:last-child .card-img-top {
+    background: url(../PCweb/img/qiniu@2x.png) no-repeat;
+    background-size: cover;
+}
+
+#link {
+    margin-top: 2.3em;
+    padding: 0 18.75%;
+    padding-top: .5em;
+    padding-bottom: .2em;
+
+    background-color: #FFF;
+} /* 定义友情链接区的背景和布局 */
+#link h4 {
+    margin-bottom: 1.4em;
+
+    font-size: .5em;
+    color: #333;
+} /* 定义友情链接的标题 */
+
+#link .row {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+}
+#link .col-md {
+    position: relative;
+    padding: 0;
+    margin-bottom: 1em;
+
+    font-size: .4em;
+    color: #999;
+    text-align: center;
+}
+#link .col-md:before {
+    content: "";
+    display: inline-block;
+    margin-right: .6em;
+
+    width: .3em;
+    height: .3em;
+    
+    border-radius: 50%;
+    background-color: #999;
+    vertical-align: middle;
+} /* 定义链接前的小圆点样式，因li默认样式的小圆点不包含在col布局内，影响下划线的宽度 */
+
+#link .col-md:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    
+    width: 0;
+    height: 120%;
+
+    border-bottom: .1em solid #26A26F;
+    -webkit-transition: 0.2s all linear;
+    transition: 0.2s all linear;
+} /* 定义链接的下划线 */
+#link .col-md:hover:after {
+    left: 0; /*鼠标滑过时，下划线从右向左移动*/
+    width: 100%; /*同时，下划线宽度从0-100%*/
+    transform: scaleX(0.8);
+}
+#link .col-md:hover ~ .col-md:after { /*~ 选择器：查找指定元素后面的所有兄弟结点*/
+    left: 0; /*处于hover后面元素的下划线从左侧开始显示*/
+} /* 定义下划线在悬浮状态时的滑动方向 */
+
+#home footer {
+    margin: 0;
+    padding: 0 18.75%;
+       
+    color: #FFF;
+    background-color: #26A26F;
+} /* 定义页脚的样式 */
+#home footer .row {
+    padding: .9em 0;
+}
+#home footer h5,
+#home footer p {
+    margin: 0;
+    font-size: .4em;
+}
+#home footer .col-md {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} /* 定义页脚的字体大小以及各列的布局 */
+
+#home footer .col-md:first-child h5 {
+    margin-bottom: 4em;
+}
+#home footer .col-md:first-child span:not(:last-child):after {
+    content: "";
+    margin: 0 1em;
+    
+    height: .4em;
+    border-right: .2em solid #FFF;
+} /* 定义页脚的技能树的列布局 */
+
+#home footer .col-md:nth-child(2) h5 {
+    margin-bottom: 2em;
+}
+#home footer .col-md:nth-child(2) span:hover {
+    border-bottom: .2em solid #FFF;
+} /* 定义页脚的旗下网站的列布局及悬浮时样式 */
+
+#home footer .col-md:last-child {
+   position: relative;
+}
+#home footer .col-md:last-child h5 {
+    margin-bottom: .05em;
+    position: absolute;
+    right: 0;
+}
+#home footer .col-md:last-child .qrcode {
+    position: absolute;
+    top: 1.5em;
+    bottom: 2.25em;
+    right: 0;
+
+    width: 6em;
+    height: 6em;
+
+    background: url(../PCweb/img/qrcode@3x.png) no-repeat;
+    background-size: cover;
+} /* 定义页脚的二维码的列布局 */
+
+#home aside {
+    font-size: .4em;
+    color: #FFF;
+    border-top: .1em solid #32C086;
+    background-color: #26A26F;
+} /* 定义安全备案区的样式 */
