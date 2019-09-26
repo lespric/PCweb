@@ -223,7 +223,6 @@ body {
 
 #feature .col-md:last-child {
     margin-top: 2.2em;
-    padding-left: 1.4em;
     display: flex;
     align-items: center;
 
@@ -527,23 +526,19 @@ body {
 #home footer .col-md:nth-child(2) h5 {
     margin-bottom: 2em;
 }
+#home footer .col-md:nth-child(2) span {
+    margin-right: 2.25em;
+}
 #home footer .col-md:nth-child(2) span:hover {
     border-bottom: .2em solid #FFF;
 } /* 定义页脚的旗下网站的列布局及悬浮时样式 */
 
-#home footer .col-md:last-child {
-   position: relative;
-}
 #home footer .col-md:last-child h5 {
     margin-bottom: .05em;
-    position: absolute;
-    right: 0;
 }
 #home footer .col-md:last-child .qrcode {
-    position: absolute;
-    top: 1.5em;
-    bottom: 2.25em;
-    right: 0;
+    margin-left: auto;
+    margin-right: 0;
 
     width: 6em;
     height: 6em;
