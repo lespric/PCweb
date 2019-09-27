@@ -38,6 +38,10 @@ body {
 
   background-color: #fafafa;
 } /* 定义全局样式 */
+h4,
+h5 {
+    font-weight: 600;
+}
 
 #home header {
   padding: 0 18.75%;
@@ -510,7 +514,7 @@ body {
     margin: 0;
     font-size: .4em;
 }
-#home footer .col-md {
+#home footer .col-lg {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
