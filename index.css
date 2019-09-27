@@ -459,15 +459,13 @@ h5 {
     list-style: none;
 }
 #link .col-lg {
-    position: relative;
     padding: 0;
     margin-bottom: 1em;
 
     font-size: .4em;
     color: #999;
-    text-align: center;
 }
-#link .col-lg:before {
+#link .col-lg a:before {
     content: "";
     display: inline-block;
     margin-right: .6em;
@@ -480,27 +478,10 @@ h5 {
     vertical-align: middle;
 } /* 定义链接前的小圆点样式，因li默认样式的小圆点不包含在col布局内，影响下划线的宽度 */
 
-#link .col-lg:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    
-    width: 0;
-    height: 120%;
-
+#link .col-lg a:hover {
+    padding-bottom: .2em;
     border-bottom: .1em solid #26A26F;
-    -webkit-transition: 0.2s all linear;
-    transition: 0.2s all linear;
 } /* 定义链接的下划线 */
-#link .col-lg:hover:after {
-    left: 0; /*鼠标滑过时，下划线从右向左移动*/
-    width: 100%; /*同时，下划线宽度从0-100%*/
-    transform: scaleX(0.8);
-}
-#link .col-lg:hover ~ .col-md:after { /*~ 选择器：查找指定元素后面的所有兄弟结点*/
-    left: 0; /*处于hover后面元素的下划线从左侧开始显示*/
-} /* 定义下划线在悬浮状态时的滑动方向 */
 
 #home footer {
     margin: 0;
