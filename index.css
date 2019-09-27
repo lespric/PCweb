@@ -244,6 +244,9 @@ h5 {
     display: flex;
     flex-direction: column;
 }
+#feature .col-lg:last-child .container {
+    transform: translateX(40%);
+} /* 使人数显示区的子元素左对齐，父元素居中对齐 */
 #feature .col-lg:last-child .row:first-child {
     margin-bottom: .8em;
 } 
