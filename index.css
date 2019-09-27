@@ -1,12 +1,12 @@
 @media all and (orientation: portrait) {
   @media (min-width: 980px) {
     html {
-      font-size: 1rem;
+      font-size: 2rem;
     }
   } /* 竖屏电脑 */
   @media (min-width: 768px) and (max-width: 979px) {
     html {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   } /* 竖屏平板 */
   @media (max-width: 767px) {
@@ -17,12 +17,12 @@
 }
 
 @media all and (orientation: landscape) {
-  @media (min-width: 1024px) {
+  @media (min-width: 1201px) {
     html  {
       font-size: 2rem;
     }
   } /*横屏网页 */
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     html {
       font-size: 1rem;
     }
