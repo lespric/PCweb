@@ -104,6 +104,19 @@ h5 {
     animation: jump 1s ease;
 } /* 定义按钮组的悬浮状态动画 */
 
+#home .popover .popover-header {
+    font-size: 0.5em;
+    background: none;
+}
+#home .popover .popover-body {
+    margin: auto auto;
+    width: 4em;
+    height: 4em;
+
+    background: url(../PCweb/img/qrcode@3x.png) no-repeat;
+    background-size: cover;
+} /* 定义提示弹出框的样式 */
+
 #home nav {
     padding: 0;
     padding-left: 62%;
@@ -530,7 +543,7 @@ h5 {
 } /* 定义页脚的旗下网站的列布局 */
 
 #home footer .col-md-2 h5 {
-    margin-bottom: .05em;
+    margin-bottom: .1em;
 }
 #home footer .col-md-2 .qrcode {
 
