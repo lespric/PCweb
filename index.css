@@ -1,15 +1,15 @@
 @media all and (orientation: portrait) {
-  @media (min-device-width: 980px) {
+  @media (min-width: 980px) {
     html {
       font-size: 1rem;
     }
   } /* 竖屏电脑 */
-  @media (min-device-width: 768px) and (max-device-width: 979px) {
+  @media (min-width: 768px) and (max-width: 979px) {
     html {
       font-size: 1rem;
     }
   } /* 竖屏平板 */
-  @media (max-device-width: 767px) {
+  @media (max-width: 767px) {
     html {
       font-size: 1rem;
     }
@@ -17,12 +17,12 @@
 }
 
 @media all and (orientation: landscape) {
-  @media (min-device-width: 1024px) {
+  @media (min-width: 1024px) {
     html  {
       font-size: 2rem;
     }
   } /*横屏网页 */
-  @media (max-device-width: 1023px) {
+  @media (max-width: 1023px) {
     html {
       font-size: 1rem;
     }
@@ -47,7 +47,6 @@ h5 {
   padding: 0 18.75%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   height: 1em;
   color: #29b078;
@@ -73,7 +72,12 @@ h5 {
   width: .6em;
   height: .6em;
 
+  border: none;
   border-radius: 0.1em;
+}
+#home .btn-group .btn:focus {
+    border: none;
+    box-shadow: none;
 }
 #home .btn-group .btn:first-child {
   background: url(../PCweb/img/QQ@3x.png) no-repeat;
@@ -87,6 +91,18 @@ h5 {
   background: url(../PCweb/img/sina@3x.png) no-repeat;
   background-size: cover;
 } /* 定义按钮组的样式 */
+@keyframes jump {
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-0.4em);
+    }
+}
+#home .btn-group .btn:hover {
+    animation: jump 1s ease;
+} /* 定义按钮组的悬浮状态动画 */
 
 #home nav {
     padding: 0;
@@ -174,9 +190,7 @@ h5 {
     margin-top: 2.2em;
 }
 #feature .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     margin-top: 2.2em;
     
     background: none;
@@ -202,11 +216,6 @@ h5 {
 
 #feature .card-body {
     padding: 0;
-
-    width: 6em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 #feature .card-body .card-title {
     margin: 0;
@@ -271,9 +280,6 @@ h5 {
     color: #333;
 } /* 定义步骤区的标题 */
 #steps .row {
-    display: flex;
-    align-items: center;
-
     margin: 0;
     margin-bottom: 1.1em;
 } /* 定义步骤区的文本行样式 */
@@ -324,12 +330,6 @@ h5 {
 #students .row {
     display: flex;
     justify-content: space-between;
-}
-#students .card,
-#students .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 #students .card {
     margin: 0 .5em;
@@ -453,8 +453,6 @@ h5 {
 #link .row {
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
 
     list-style: none;
 }
@@ -496,6 +494,9 @@ h5 {
 #home footer .row {
     padding-bottom: .8em;
 }
+#home footer .row span:hover {
+    border-bottom: .2em solid #FFF;
+} /* 定义文本悬浮时样式 */
 #home footer h5,
 #home footer p {
     margin: 0;
@@ -504,38 +505,35 @@ h5 {
 #home footer h5 {
     padding-top: 2em;
 }
-#home footer .col-lg {
+#home footer .col-md-4,
+#home footer .col-md-2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 } /* 定义页脚的字体大小以及各列的布局 */
 
-#home footer .col-lg:first-child h5 {
+#home footer .col-md-4:first-child h5 {
     margin-bottom: 4em;
 }
-#home footer .col-lg:first-child .divider {
+#home footer .col-md-4:first-child .divider {
     margin: 0 1em;
     
     height: .4em;
     border-right: .2em solid #FFF;
 } /* 定义页脚的技能树的列布局 */
 
-#home footer .col-lg:nth-child(2) h5 {
+#home footer .col-md-4:nth-child(2) h5 {
     margin-bottom: 2em;
 }
-#home footer .col-lg:nth-child(2) span {
+#home footer .col-md-4:nth-child(2) span {
     margin-right: 2.25em;
-}
-#home footer .col-lg span:hover {
-    border-bottom: .2em solid #FFF;
-} /* 定义页脚的旗下网站的列布局及文本悬浮时样式 */
+} /* 定义页脚的旗下网站的列布局 */
 
-#home footer .col-lg:last-child h5 {
+#home footer .col-md-2 h5 {
     margin-bottom: .05em;
 }
-#home footer .col-lg:last-child .qrcode {
-    margin-left: auto;
-    margin-right: 0;
+#home footer .col-md-2 .qrcode {
+
 
     width: 6em;
     height: 6em;
