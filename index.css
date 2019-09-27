@@ -199,7 +199,7 @@ body {
 #feature .card-body {
     padding: 0;
 
-    width: 5.6em;
+    width: 6em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,15 +221,14 @@ body {
     letter-spacing: 0.5;
 } /* 定义特点区的卡片文本的布局和样式 */
 
-#feature .col-md:last-child {
+#feature .col-lg:last-child {
     margin-top: 2.2em;
     display: flex;
     align-items: center;
 
-    height: 6.6em;
-    border-left: 1px dashed #DEDEDE
+    border-left: 1px dashed #DEDEDE;
 }
-#feature .col-md:last-child .icon{
+#feature .col-lg:last-child .icon{
     display: inline-block;
     width: .6em;
     height: .6em;
@@ -237,20 +236,20 @@ body {
     background: url(../PCweb/img/user@3x.png) no-repeat;
     background-size: cover;
 }
-#feature .col-md:last-child .row {
+#feature .col-lg:last-child .row {
     display: flex;
     flex-direction: column;
 }
-#feature .col-md:last-child .row:first-child {
+#feature .col-lg:last-child .row:first-child {
     margin-bottom: .8em;
 } 
-#feature .col-md:last-child h5 {
+#feature .col-lg:last-child h5 {
     margin-bottom: 1em;
 
     font-size: .5em;
     color: #26A26F;
 }
-#feature .col-md:last-child p {
+#feature .col-lg:last-child p {
     margin-bottom: 0;
 
     font-size: .5em;
@@ -271,9 +270,10 @@ body {
     margin: 0;
     margin-bottom: 1.1em;
 } /* 定义步骤区的文本行样式 */
-#steps .col-md {
+#steps .col-lg {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     margin-top: 1.4em;
     padding: 0;
@@ -314,7 +314,10 @@ body {
     color: #333;
 } /* 定义学员展示区的标题 */
 
-
+#students .row {
+    display: flex;
+    justify-content: space-between;
+}
 #students .card,
 #students .card-body {
     display: flex;
@@ -347,7 +350,7 @@ body {
 } /* 定义学员展示区的卡片图片 */
 
 #students .card-body {
-    padding: 1em .8em;
+    padding: 1em .5em;
 }
 #students .card-title {
     margin-bottom: 1.4em;
@@ -402,6 +405,7 @@ body {
 #business .card .card-img-top{
    width: 6em;
    height: 4.4em;
+   margin: auto auto;
 }
 #business .card:first-child .card-img-top {
     background: url(../PCweb/img/alibaba@3x.png) no-repeat;
@@ -416,11 +420,11 @@ body {
     background-size: cover;
 }
 #business .card:nth-child(4) .card-img-top {
-    background: url(../PCweb/img/ronglian@2x.png) no-repeat;
+    background: url(../PCweb/img/ronglian@3x.png) no-repeat;
     background-size: cover;
 }
 #business .card:last-child .card-img-top {
-    background: url(../PCweb/img/qiniu@2x.png) no-repeat;
+    background: url(../PCweb/img/qiniu@3x.png) no-repeat;
     background-size: cover;
 }
 
@@ -447,7 +451,7 @@ body {
 
     list-style: none;
 }
-#link .col-md {
+#link .col-lg {
     position: relative;
     padding: 0;
     margin-bottom: 1em;
@@ -456,7 +460,7 @@ body {
     color: #999;
     text-align: center;
 }
-#link .col-md:before {
+#link .col-lg:before {
     content: "";
     display: inline-block;
     margin-right: .6em;
@@ -469,7 +473,7 @@ body {
     vertical-align: middle;
 } /* 定义链接前的小圆点样式，因li默认样式的小圆点不包含在col布局内，影响下划线的宽度 */
 
-#link .col-md:after {
+#link .col-lg:after {
     content: "";
     position: absolute;
     top: 0;
@@ -482,12 +486,12 @@ body {
     -webkit-transition: 0.2s all linear;
     transition: 0.2s all linear;
 } /* 定义链接的下划线 */
-#link .col-md:hover:after {
+#link .col-lg:hover:after {
     left: 0; /*鼠标滑过时，下划线从右向左移动*/
     width: 100%; /*同时，下划线宽度从0-100%*/
     transform: scaleX(0.8);
 }
-#link .col-md:hover ~ .col-md:after { /*~ 选择器：查找指定元素后面的所有兄弟结点*/
+#link .col-lg:hover ~ .col-md:after { /*~ 选择器：查找指定元素后面的所有兄弟结点*/
     left: 0; /*处于hover后面元素的下划线从左侧开始显示*/
 } /* 定义下划线在悬浮状态时的滑动方向 */
 
@@ -512,30 +516,30 @@ body {
     justify-content: space-between;
 } /* 定义页脚的字体大小以及各列的布局 */
 
-#home footer .col-md:first-child h5 {
+#home footer .col-lg:first-child h5 {
     margin-bottom: 4em;
 }
-#home footer .col-md:first-child .divider {
+#home footer .col-lg:first-child .divider {
     margin: 0 1em;
     
     height: .4em;
     border-right: .2em solid #FFF;
 } /* 定义页脚的技能树的列布局 */
 
-#home footer .col-md:nth-child(2) h5 {
+#home footer .col-lg:nth-child(2) h5 {
     margin-bottom: 2em;
 }
-#home footer .col-md:nth-child(2) span {
+#home footer .col-lg:nth-child(2) span {
     margin-right: 2.25em;
 }
-#home footer .col-md span:hover {
+#home footer .col-lg span:hover {
     border-bottom: .2em solid #FFF;
 } /* 定义页脚的旗下网站的列布局及文本悬浮时样式 */
 
-#home footer .col-md:last-child h5 {
+#home footer .col-lg:last-child h5 {
     margin-bottom: .05em;
 }
-#home footer .col-md:last-child .qrcode {
+#home footer .col-lg:last-child .qrcode {
     margin-left: auto;
     margin-right: 0;
 
