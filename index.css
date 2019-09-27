@@ -296,7 +296,7 @@ h5 {
     margin: 0;
     margin-bottom: 1.1em;
 } /* 定义步骤区的文本行样式 */
-#steps .col-lg {
+#steps .col-xl {
     display: flex;
     align-items: center;
     justify-content: center;
