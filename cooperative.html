@@ -44,7 +44,7 @@
     </header>
     <!--顶部联系方式栏-->
 
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark" id="navbar-top">
       <a class="navbar-brand mr-auto" href="index.html"></a>
       <button
         class="navbar-btn navbar-toggler ml-auto"
@@ -60,12 +60,12 @@
       <div class="collapse navbar-collapse in" id="navbarNav">
         <ul class="navbar-nav ml-sm-auto">
           <li class="nav-item w-100">
-            <a class="nav-link" href="#"
+            <a class="nav-link active" href="#"
               >首页 <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item w-100">
-            <a class="nav-link" href="#">职业</a>
+            <a class="nav-link" href="porfession.html">职业</a>
           </li>
           <li class="nav-item w-100">
             <a class="nav-link" href="#">推荐</a>
@@ -88,7 +88,7 @@
 
       <article id="content">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb p-0">
+          <ol class="breadcrumb m-0">
             <li class="breadcrumb-item"><a href="index.html">首页</a></li>
             <li class="breadcrumb-item active p-0" aria-current="page">
               合作企业
@@ -110,6 +110,7 @@
             合作企业
             <span class="dropdown-toggle ml-2"></span>
           </button>
+          <!--品牌选择链接区，折叠按钮-->
           <div class="align-items-start collapse navbar-collapse in" id="brand-nav">
             <div id="brand-list" class="list-group text-nowrap text-center shadow-sm rounded">
               <h4 class="list-group-item d-none d-lg-block">合作企业</h4>
@@ -127,6 +128,8 @@
               <a class="list-group-item mb-3" href="#alibaba-12">阿里巴巴&emsp;</a>
             </div>
           </div>
+          <!--品牌选择链接区，滚动监听作用-->
+
           <div
             data-spy="scroll"
             data-target="#brand-list"
@@ -254,47 +257,50 @@
                 </div>
             </div>
           </div>
-        </section>  
+        </section>
+        <!--品牌选择文本区-->
+      </article>
+      <!--战略合作企业介绍区-->
     </main>
 
     <footer>
-      <article class="container">
-        <section class="row">
-          <div class="col-md-4">
-            <h5>
-              技能树 — 改变你我
-            </h5>
-            <p class="text-nowrap">
-              <span>关于我们</span>
-              <span class="divider"></span>
-              <span>联系我们</span>
-              <span class="divider"></span>
-              <span>合作企业</span>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>
-              旗下网站
-            </h5>
-            <p class="text-nowrap">
-              <span>草船云孵化器</span>
-              <span>最强IT特训营</span>
-            </p>
-            <p class="text-nowrap">
-              <span>葡萄藤轻游戏</span>
-              <span>桌游精灵</span>
-            </p>
-          </div>
-          <div class="col-md-2 ml-md-auto">
-            <h5 class="text-nowrap">
-              微信公众平台
-            </h5>
-            <p class="qrcode"></p>
-          </div>
-        </section>
-      </article>
-      <!--页脚板块-->
-    </footer>
+        <article class="container">
+          <section class="row">
+            <div class="col-md-4">
+              <h5>
+                技能树 — 改变你我
+              </h5>
+              <p class="text-nowrap">
+                <a>关于我们</a>
+                <span class="divider"></span>
+                <a>联系我们</a>
+                <span class="divider"></span>
+                <a href="cooperative.html">合作企业</a>
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h5>
+                旗下网站
+              </h5>
+              <p class="text-nowrap">
+                <a>草船云孵化器</a>
+                <a>最强IT特训营</a>
+              </p>
+              <p class="text-nowrap">
+                <a>葡萄藤轻游戏</a>
+                <a>桌游精灵</a>
+              </p>
+            </div>
+            <div class="col-md-2 ml-md-auto">
+              <h5 class="text-nowrap">
+                微信公众平台
+              </h5>
+              <p class="qrcode"></p>
+            </div>
+          </section>
+        </article>
+        <!--页脚板块-->
+      </footer>
 
     <aside class="text-center">
       Copyright © 2015技能树 www.jnshu.com All Rights Reserved |
@@ -311,10 +317,6 @@
       type="text/javascript"
       src="../PCweb/bootstrap/bootstrap.min.js"
     ></script>
-    <script>
-      $(function() {
-        $('[data-toggle="popover"]').popover();
-      }); //弹出提示框的触发条件
-    </script>
+
   </body>
 </html>
