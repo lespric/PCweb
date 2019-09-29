@@ -715,6 +715,7 @@ aside {
 
 #profession-sel .scrollspy {
     padding-bottom: 6em;
+    height: 100%;
     overflow-x: hidden;
 } /* 定义职业选择区的下边距及溢出样式 */
 
@@ -731,8 +732,10 @@ aside {
 #profession-sel .container-fluid .row {
     margin: 0 -0.4em;
 }
+#profession-sel .container-fluid .col-lg {
+    margin: 0 0.4em;
+}
 #profession-sel .container-fluid .card {
-  margin: 0 0.4em;
   margin-top: 1.2em;
   position: relative;
   cursor: pointer;
