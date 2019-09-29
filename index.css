@@ -43,7 +43,7 @@ h5 {
     font-weight: 600;
 }
 
-#home header {
+header {
   padding: 0 18.75%;
   display: flex;
   justify-content: space-between;
@@ -54,19 +54,19 @@ h5 {
   background-color: #FFF;
 } /* 定义顶部的样式 */
 
-#home header .phone {
+header .phone {
   font-size: .4em;
 
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-#home header a {
+header a {
   color: #29b078;
 } /* 定义联系电话的样式 */
 
-#home .btn-group .btn {
-  margin-left: .4em;
+header .btn-group .btn {
+  margin-left: .4em!important;
   padding: 0;
 
   width: .6em;
@@ -75,19 +75,19 @@ h5 {
   border: none;
   border-radius: 0.1em;
 }
-#home .btn-group .btn:focus {
+header .btn-group .btn:focus {
     border: none;
     box-shadow: none;
 }
-#home .btn-group .btn:first-child {
+header .btn-group .btn:first-child {
   background: url(../PCweb/img/QQ@3x.png) no-repeat;
   background-size: cover;
 }
-#home .btn-group .btn:nth-child(2) {
+header .btn-group .btn:nth-child(2) {
   background: url(../PCweb/img/wechat@3x.png) no-repeat;
   background-size: cover;
 }
-#home .btn-group .btn:last-child {
+header .btn-group .btn:last-child {
   background: url(../PCweb/img/sina@3x.png) no-repeat;
   background-size: cover;
 } /* 定义按钮组的样式 */
@@ -100,15 +100,15 @@ h5 {
         transform: translateY(-0.4em);
     }
 }
-#home .btn-group .btn:hover {
+header .btn-group .btn:hover {
     animation: jump 1s ease;
 } /* 定义按钮组的悬浮状态动画 */
 
-#home .popover .popover-header {
+.popover .popover-header {
     font-size: 0.5em;
     background: none;
 }
-#home .popover .popover-body {
+.popover .popover-body {
     margin: auto auto;
     width: 4em;
     height: 4em;
@@ -117,18 +117,15 @@ h5 {
     background-size: cover;
 } /* 定义提示弹出框的样式 */
 
-#home nav {
-    padding: 0;
-    padding-left: 62%;
+.navbar {
+    padding: 0 18.75%;
  
     background-color: #29B078;
     box-shadow: 0 0 .1em rgba(8, 1, 3, 0.15);
 } /* 定义导航栏的样式 */
-#home nav .navbar-toggler {
+.navbar .navbar-toggler {
     margin: .25em;
     padding: 0;
-    margin-left: auto;
-    margin-right: .25em;
 
     width: 2.5em;
     height: 2em;
@@ -141,8 +138,9 @@ h5 {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 0 1em;
 
-    width: 2.5em;
+    width: 4.5em;
     height: 2.5em;
 }
 #navbarNav .nav-item .nav-link{
@@ -168,6 +166,7 @@ h5 {
 #navbarNav .nav-item:hover:before {
     left: 0; /*鼠标滑过时，下划线从右向左移动*/
     width: 100%; /*同时，下划线宽度从0-100%*/
+    cursor: pointer;
 }
 #navbarNav .nav-item:hover ~ .nav-item:before { /*~ 选择器：查找指定元素后面的所有兄弟结点*/
     left: 0; /*处于hover后面元素的下划线从左侧开始显示*/
@@ -420,6 +419,7 @@ h5 {
 #business .card:hover {
     box-shadow: 0 0 .5em rgba(8, 1, 3, 0.3);
     z-index: 1;
+    cursor: pointer;
 } /* 定义合作企业区的卡片悬浮状态 */
 
 #business .card .card-img-top{
@@ -492,11 +492,11 @@ h5 {
 } /* 定义链接前的小圆点样式，因li默认样式的小圆点不包含在col布局内，影响下划线的宽度 */
 
 #link .col-lg a:hover {
-    padding-bottom: .2em;
     border-bottom: .1em solid #26A26F;
+    cursor: pointer;
 } /* 定义链接的下划线 */
 
-#home footer {
+footer {
     margin: 0;
     padding: 0 18.75%;
        
@@ -504,48 +504,54 @@ h5 {
     background-color: #26A26F;
 } /* 定义页脚的样式 */
 
-#home footer .row {
+footer .row {
     padding-bottom: .8em;
 }
-#home footer .row span:hover {
+footer .row a {
+    color: #FFF;
+    text-decoration-line: none;
+}
+footer .row a:hover {
     border-bottom: .2em solid #FFF;
+    color: #FFF;
+    cursor: pointer;
 } /* 定义文本悬浮时样式 */
-#home footer h5,
-#home footer p {
+footer h5,
+footer p {
     margin: 0;
     font-size: .4em;
 }
-#home footer h5 {
+footer h5 {
     padding-top: 2em;
 }
-#home footer .col-md-4,
-#home footer .col-md-2 {
+footer .col-md-4,
+footer .col-md-2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 } /* 定义页脚的字体大小以及各列的布局 */
 
-#home footer .col-md-4:first-child h5 {
+footer .col-md-4:first-child h5 {
     margin-bottom: 4em;
 }
-#home footer .col-md-4:first-child .divider {
+footer .col-md-4:first-child .divider {
     margin: 0 1em;
     
     height: .4em;
     border-right: .2em solid #FFF;
 } /* 定义页脚的技能树的列布局 */
 
-#home footer .col-md-4:nth-child(2) h5 {
+footer .col-md-4:nth-child(2) h5 {
     margin-bottom: 2em;
 }
-#home footer .col-md-4:nth-child(2) span {
+footer .col-md-4:nth-child(2) a {
     margin-right: 2.25em;
 } /* 定义页脚的旗下网站的列布局 */
 
-#home footer .col-md-2 h5 {
+footer .col-md-2 h5 {
     margin-bottom: .1em;
 }
-#home footer .col-md-2 .qrcode {
+footer .col-md-2 .qrcode {
 
 
     width: 6em;
@@ -555,9 +561,124 @@ h5 {
     background-size: cover;
 } /* 定义页脚的二维码的列布局 */
 
-#home aside {
+aside {
     font-size: .4em;
     color: #FFF;
     border-top: .1em solid #32C086;
     background-color: #26A26F;
 } /* 定义安全备案区的样式 */
+/* 以上是首页内容的样式 */
+
+.navbar .navbar-brand {
+    width: 1.35em;
+    height: 0.6em;
+
+    background: url(../PCweb/img/cooperative/brand@2x.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+} /* 定义导航栏中品牌的样式 */
+
+.breadcrumb {
+    margin: 2em 0;
+    background: none;
+    font-size: .4em;
+}
+.breadcrumb a {
+    color: #333;
+}
+.breadcrumb .active {
+    color: #29B078;
+} /* 定义面包屑的字体和颜色 */
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding: 0;
+    color: #333;
+    content: ">";
+} /* 定义面包屑导航的分隔符 */
+
+#introduce {
+    position: relative;
+    margin-bottom: 2.8em;
+} /* 滚动监听必须对父元素添加相对定位 */
+#introduce .btn {
+  background-color: #FFF;
+  color: #333;
+  font-weight: 600;
+} /* 定义内容介绍区的折叠按钮样式 */
+
+#brand-list {
+    background-color: #FFF;
+}
+#brand-list h4,
+#brand-list a {
+    padding: 1em 5em;
+
+    font-size: .6em;
+    color: #29B078;
+
+    border: none;
+} /* 定义品牌链接的全局样式 */
+
+#brand-list h4 {
+    color: #333;
+    border-bottom: .1em solid #E6E6E6;
+} /* 定义品牌链接的小标题样式 */
+
+#brand-list a:before {
+   content: "";
+   display: inline-block;
+   vertical-align: middle;
+
+   margin-right: .5em;
+   width: .6em;
+   height: .6em;
+
+   border: .1em solid #FF650E;
+   border-radius: 50%;
+}
+#brand-list a:hover,
+#brand-list .active {
+    color: #FF650E;
+    background: none;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+#brand-list a:hover:before,
+#brand-list .active:before {
+    background-color: #FF650E;
+} /* 定义品牌链接的样式和悬浮及点击状态 */
+
+#introduce .scrollspy {
+    height: 60em;
+}
+#introduce .scrollspy .card {
+    overflow: auto;
+    border: none;
+    height: 100%;
+} /* 定义介绍区的整体布局，目前只会使文本去的父元素高度与卡片高度一致才能做到切换效果 */
+
+#introduce .scrollspy .card-body {
+    padding: 0;
+    padding-bottom: 4.6em;
+}
+#introduce .scrollspy .card-title,
+#introduce .scrollspy .card-text {
+    padding: 2em 4.5em;
+
+    font-size: .4em;
+    font-weight: 500;
+    color: #999;
+    line-height: 1.75em;
+}
+#introduce .scrollspy .card-title {
+    margin: 0;
+    border-bottom: .1em solid #E6E6E6;
+}
+#introduce .scrollspy .card-title img {
+    width: 9.5em;
+    height: 8em;
+}
+#introduce .scrollspy .card-text p {
+    margin-bottom: 2.5em;
+} /* 定义介绍区的文本样式和布局 */
