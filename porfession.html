@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body id="home">
+  <body data-spy="scroll" data-target="#skills-list" data-offset="0">
     <header class="align-items-center">
       <span class="phone"
         >客服热线：
@@ -117,12 +117,7 @@
           </ul>
           <!--职业选择区的导航栏-->
 
-          <div
-            data-spy="scroll"
-            data-target="#skills-list"
-            data-offset="100"
-            class="scrollspy w-100"
-          >
+          <div class="scrollspy w-100">
             <div class="container-fluid p-0" id="front-end">
               <h4 class="title w-100 m-0">前端开发方向</h4>
               <div class="row no-gutters">
@@ -2055,6 +2050,14 @@
         </section>
         <!--职业选择区-->
       </article>
+
+      <a class="gotop fixed-bottom card shadow-sm">
+        <span
+          class="carousel-control-next-icon"
+          aria-hidden="true"
+        ></span>
+      </a>
+      <!--返回顶部按钮-->
     </main>
 
     <footer>
@@ -2110,6 +2113,17 @@
       $(function() {
         $('[data-toggle="popover"]').popover();
       }); //弹出提示框的触发条件
+
+
+      $(function() {
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > $(window).height()) $(".gotop").fadeIn();
+          else $(".gotop").fadeOut();
+        }); // 当滚动值超过屏幕的可视高度时，返回顶部按钮就会渐显
+        $(".gotop").click(function() {
+          $("html, body").animate({ scrollTop: 0 }, 500);
+        }); // 给返回顶部按钮一个点击事件，即为改变滚动值为0的动画，且动画时间为500ms
+      });
     </script>
   </body>
 </html>
