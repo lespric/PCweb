@@ -823,12 +823,13 @@ aside {
 .gotop {
     left: auto;
     margin-right: 5%;
+    margin-bottom: 10em;
     
 
     width: 2em;
     height: 2em;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 32px;
+    min-height: 32px;
 
     background-color: #29b078;
     display: none;
