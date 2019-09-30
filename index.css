@@ -598,9 +598,8 @@ aside {
 } /* 定义面包屑导航的分隔符 */
 
 #introduce {
-  position: relative;
   margin-bottom: 2.8em;
-} /* 滚动监听必须对父元素添加相对定位 */
+}
 #introduce .btn {
   background-color: #fff;
   color: #333;
@@ -652,13 +651,14 @@ aside {
 } /* 定义品牌链接的样式和悬浮及点击状态 */
 
 #introduce .scrollspy {
+  position: relative;
   height: 60em;
-}
+} /* 滚动监听必须对监听对象添加相对定位 */
 #introduce .scrollspy .card {
   overflow: auto;
   border: none;
   height: 100%;
-} /* 定义介绍区的整体布局，目前只会使文本去的父元素高度与卡片高度一致才能做到切换效果 */
+} /* 定义介绍区的整体布局，目前只会使文本去的父元素高度与卡片高度一致才能对应展示 */
 
 #introduce .scrollspy .card-body {
   padding: 0;
