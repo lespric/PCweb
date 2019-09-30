@@ -604,7 +604,8 @@ aside {
 #introduce .btn {
   background-color: #fff;
   color: #333;
-  font-weight: 600;
+  font-size: 1.6em;
+  font-weight: 500;
 } /* 定义内容介绍区的折叠按钮样式 */
 
 #brand-list {
@@ -801,8 +802,6 @@ aside {
 
 #profession-sel .panel {
   position: absolute;
-  padding: 2.2em 2em;
-  display: none;
 
   border-radius: .25rem;
   background-color: rgba(0, 0, 0, 0.76);
@@ -816,9 +815,19 @@ aside {
     font-size: .4em;
     line-height: 2;
 } /* 定义职业选择区的卡片隐藏面板的样式 */
+#profession-sel .panel {
+    z-index: -1;
+    padding: 0;
+    height: 0;
+
+    -webkit-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+}
 #profession-sel .card:hover .panel {
-    display: block;
-} /* 定义职业选择区的卡片隐藏面板在悬浮状态下显示 */
+    z-index: 1;
+    padding: 2.2em 2em;
+    height: 100%;
+} /* 定义职业选择区的卡片隐藏面板在悬浮状态下显示的动画  */
 
 .gotop {
     left: auto;
