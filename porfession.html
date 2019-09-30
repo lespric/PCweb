@@ -2117,9 +2117,11 @@
 
       $(function() {
         $(window).scroll(function() {
-          if ($(window).scrollTop() > $(window).height()) $(".gotop").fadeIn();
-          else $(".gotop").fadeOut();
-        }); // 当滚动值超过屏幕的可视高度时，返回顶部按钮就会渐显
+          if ($(window).scrollTop() > 0 ) 
+          $(".gotop").fadeIn();
+          else 
+          $(".gotop").fadeOut();
+        }); // 当滚动值大于0时，即有滚动时，返回顶部按钮就会渐显
         $(".gotop").click(function() {
           $("html, body").animate({ scrollTop: 0 }, 500);
         }); // 给返回顶部按钮一个点击事件，即为改变滚动值为0的动画，且动画时间为500ms
