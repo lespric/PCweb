@@ -761,6 +761,10 @@ aside {
 } /* 强制英文长字串自动换行 */
 /* 定义职业选择区的卡片的顶部样式 */
 
+
+#profession-sel .card-text .table {
+  font-size: 0.3em;
+}
 #profession-sel .card-text .table {
   border-top: 0.2em solid #edf1f2;
   border-bottom: 0.2em solid #edf1f2;
@@ -772,11 +776,13 @@ aside {
 #profession-sel .card-text tr th:nth-child(2),
 #profession-sel .card-text tr td {
   border-left: 0.2em solid #edf1f2;
-} /* 定义职业选择区的卡片表格的边线 */
-
-#profession-sel .card-text .table {
-  font-size: 0.3em;
+} 
+#profession-sel .card-text tbody tr:nth-child(4) th {
+  font-size: 0.25rem;
+  border-top: 0.15em solid #edf1f2;
 }
+/* 定义职业选择区的卡片表格的边线 */
+
 #profession-sel .card-text th {
   color: #999;
 }
