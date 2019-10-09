@@ -739,7 +739,6 @@ aside {
   cursor: pointer;
 } /* 定义职业选择区的每行卡片布局 */
 
-#profession-sel .card-body,
 #profession-sel .card-body h5 {
   font-size: 0.4em;
 }
