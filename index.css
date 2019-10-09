@@ -739,12 +739,13 @@ aside {
   cursor: pointer;
 } /* 定义职业选择区的每行卡片布局 */
 
-#profession-sel .card-body h5 {
+#profession-sel .media-body h5,
+#profession-sel .media-body p {
   font-size: 0.4em;
 }
 #profession-sel .card img {
-  width: 9em;
-  height: 9em;
+  width: 3.5em;
+  height: 3.5em;
 }
 #profession-sel .card-title {
   margin: 0;
