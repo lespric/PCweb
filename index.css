@@ -307,6 +307,7 @@ header .btn-group .btn:hover {
 #steps .col-xl {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   margin-top: 1.4em;
   padding: 0;
@@ -334,8 +335,7 @@ header .btn-group .btn:hover {
   margin-top: 1.4em;
   width: 0.7em;
   height: 0.7em;
-  
-  font-size: 1em;
+
   background: url(../PCweb/img/arrow@3x.png) no-repeat center;
   background-size: 0.7em 0.7em;
 }
