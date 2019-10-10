@@ -1,35 +1,35 @@
 @media (max-width: 575.98px) {
-    html {
-        font-size: 1rem;
-    }
+  html {
+    font-size: 1rem;
+  }
 } /* Extra small devices (portrait phones, less than 576px) */
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    html {
-        font-size: 1.5rem;
-    }
+  html {
+    font-size: 1.5rem;
+  }
 } /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    html {
-        font-size: 2rem;
-    }
+  html {
+    font-size: 2rem;
+  }
 } /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    html {
-        font-size: 2rem;
-    }
+  html {
+    font-size: 2rem;
+  }
 } /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-    html {
-        font-size: 2rem;
-    }
+  html {
+    font-size: 2rem;
+  }
 } /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1400px) {
   html {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
 
@@ -607,7 +607,7 @@ aside {
 #introduce .btn {
   background-color: #fff;
   color: #333;
-  font-size: 1.6em;
+  font-size: 1em;
   font-weight: 500;
 } /* 定义内容介绍区的折叠按钮样式 */
 
@@ -656,7 +656,7 @@ aside {
 
 #introduce .scrollspy {
   position: relative;
-  height: 60em;
+  height: 1100px;
 } /* 滚动监听必须对监听对象添加相对定位 */
 #introduce .scrollspy .card {
   overflow: auto;
@@ -666,7 +666,6 @@ aside {
 
 #introduce .scrollspy .card-body {
   padding: 0;
-  padding-bottom: 4.6em;
 }
 #introduce .scrollspy .card-title,
 #introduce .scrollspy .card-text {
@@ -705,7 +704,7 @@ aside {
 #skills-list .nav-item:first-child {
   padding-left: 0;
 
-  font-size: .4em;
+  font-size: 0.4em;
   color: #999;
 } /* 定义职业选择区的导航栏样式 */
 #skills-list .nav-item:not(:first-child):hover .nav-link,
@@ -716,9 +715,9 @@ aside {
 } /* 定义职业选择区的导航栏的悬浮状态 */
 
 #profession-sel .scrollspy {
-    padding-bottom: 6em;
-    height: 100%;
-    overflow-x: hidden;
+  padding-bottom: 6em;
+  height: 100%;
+  overflow-x: hidden;
 } /* 定义职业选择区的下边距及溢出样式 */
 
 #profession-sel .container-fluid .title {
@@ -732,10 +731,10 @@ aside {
 } /* 定义职业选择区各个部分的小标题 */
 
 #profession-sel .container-fluid .row {
-    margin: 0 -0.4em;
+  margin: 0 -0.4em;
 }
 #profession-sel .container-fluid .col-lg {
-    margin: 0 0.4em;
+  margin: 0 0.4em;
 }
 #profession-sel .container-fluid .card {
   margin-top: 1.2em;
@@ -765,7 +764,6 @@ aside {
 } /* 强制英文长字串自动换行 */
 /* 定义职业选择区的卡片的顶部样式 */
 
-
 #profession-sel .card-text .table {
   font-size: 0.3em;
 }
@@ -780,7 +778,7 @@ aside {
 #profession-sel .card-text tr th:nth-child(2),
 #profession-sel .card-text tr td {
   border-left: 0.2em solid #edf1f2;
-} 
+}
 #profession-sel .card-text tbody tr:nth-child(4) th {
   font-size: 0.25rem;
   border-top: 0.15em solid #edf1f2;
@@ -813,50 +811,49 @@ aside {
 #profession-sel .panel {
   position: absolute;
 
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   background-color: rgba(0, 0, 0, 0.76);
-  color: #FFF;
+  color: #fff;
 }
 #profession-sel .panel .panel-heading {
-    margin-bottom: 2.5em;
-    font-size: .4em;
+  margin-bottom: 2.5em;
+  font-size: 0.4em;
 }
 #profession-sel .panel .panel-body {
-    font-size: .4em;
-    line-height: 2;
+  font-size: 0.4em;
+  line-height: 2;
 } /* 定义职业选择区的卡片隐藏面板的样式 */
 #profession-sel .panel {
-    z-index: -1;
-    padding: 0;
-    height: 0;
+  z-index: -1;
+  padding: 0;
+  height: 0;
 
-    -webkit-transition: 0.2s all ease;
-    transition: 0.2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 #profession-sel .card:hover .panel {
-    z-index: 1;
-    padding: 2.2em 2em;
-    height: 100%;
+  z-index: 1;
+  padding: 2.2em 2em;
+  height: 100%;
 } /* 定义职业选择区的卡片隐藏面板在悬浮状态下显示的动画  */
 
 .gotop {
-    left: auto;
-    margin-right: 5%;
-    margin-bottom: 10em;
-    
+  left: auto;
+  margin-right: 5%;
+  margin-bottom: 10em;
 
-    width: 2em;
-    height: 2em;
-    min-width: 32px;
-    min-height: 32px;
+  width: 2em;
+  height: 2em;
+  min-width: 32px;
+  min-height: 32px;
 
-    background-color: #29b078;
-    display: none;
-    cursor: pointer;
-    transform: rotate(-90deg);
+  background-color: #29b078;
+  display: none;
+  cursor: pointer;
+  transform: rotate(-90deg);
 }
 .gotop .carousel-control-next-icon {
-    width: 100%;
-    height: 100%;
-    background-size: 1em 1em;
+  width: 100%;
+  height: 100%;
+  background-size: 1em 1em;
 } /*定义返回顶部的按钮样式 */
