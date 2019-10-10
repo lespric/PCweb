@@ -22,11 +22,16 @@
     }
 } /* Large devices (desktops, 992px and up) */
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
     html {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 } /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+  html {
+      font-size: 3rem;
+  }
+}
 
 body {
   margin: 0;
@@ -295,7 +300,6 @@ header .btn-group .btn:hover {
 } /* 定义步骤区的标题 */
 #steps .row {
   margin: 0;
-  margin-bottom: 1.1em;
 } /* 定义步骤区的文本行样式 */
 #steps .col-xl {
   display: flex;
