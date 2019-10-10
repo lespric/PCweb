@@ -305,10 +305,6 @@ header .btn-group .btn:hover {
   margin: 0;
 } /* 定义步骤区的文本行样式 */
 #steps .col-xl {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   margin-top: 1.4em;
   padding: 0;
 }
