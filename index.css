@@ -307,7 +307,6 @@ header .btn-group .btn:hover {
 #steps .col-xl {
   display: flex;
   align-items: center;
-  justify-content: center;
 
   margin-top: 1.4em;
   padding: 0;
@@ -335,7 +334,8 @@ header .btn-group .btn:hover {
   margin-top: 1.4em;
   width: 0.7em;
   height: 0.7em;
-
+  
+  font-size: 1em;
   background: url(../PCweb/img/arrow@3x.png) no-repeat center;
   background-size: 0.7em 0.7em;
 }
@@ -434,29 +434,30 @@ header .btn-group .btn:hover {
 #business .card .card-img-top {
   width: 6em;
   height: 4.4em;
+  max-width: 180px;
 
   font-size: 1em;
   margin: auto auto;
 }
 #business .card:first-child .card-img-top {
-  background: url(../PCweb/img/alibaba@3x.png) no-repeat;
-  background-size: cover;
+  background: url(../PCweb/img/alibaba@3x.png) no-repeat center;
+  background-size: contain;
 }
 #business .card:nth-child(2) .card-img-top {
-  background: url(../PCweb/img/jinshanyun@3x.png) no-repeat;
-  background-size: cover;
+  background: url(../PCweb/img/jinshanyun@3x.png) no-repeat center;
+  background-size: contain;
 }
 #business .card:nth-child(3) .card-img-top {
-  background: url(../PCweb/img/huanxin@3x.png) no-repeat;
-  background-size: cover;
+  background: url(../PCweb/img/huanxin@3x.png) no-repeat center;
+  background-size: contain;
 }
 #business .card:nth-child(4) .card-img-top {
-  background: url(../PCweb/img/ronglian@3x.png) no-repeat;
-  background-size: cover;
+  background: url(../PCweb/img/ronglian@3x.png) no-repeat center;
+  background-size: contain;
 }
 #business .card:last-child .card-img-top {
-  background: url(../PCweb/img/qiniu@3x.png) no-repeat;
-  background-size: cover;
+  background: url(../PCweb/img/qiniu@3x.png) no-repeat center;
+  background-size: contain;
 } /* 定义合作企业区的卡片图像 */
 
 #link {
@@ -579,8 +580,8 @@ aside {
 /* 以上是首页内容的样式 */
 
 .navbar .navbar-brand {
-  width: 1.35em;
-  height: 0.6em;
+  width: 2.7em;
+  height: 1.2em;
 
   font-size: 1em;
 
