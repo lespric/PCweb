@@ -1,38 +1,3 @@
-@media (max-width: 575.98px) {
-  html {
-    font-size: 1rem;
-  }
-} /* Extra small devices (portrait phones, less than 576px) */
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  html {
-    font-size: 1.5rem;
-  }
-} /* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  html {
-    font-size: 2rem;
-  }
-} /* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  html {
-    font-size: 2rem;
-  }
-} /* Large devices (desktops, 992px and up) */
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  html {
-    font-size: 2rem;
-  }
-} /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1400px) {
-  html {
-    font-size: 3rem;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -43,6 +8,42 @@ body {
 
   background-color: #fafafa;
 } /* 定义全局样式 */
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 0.625rem;
+  }
+} /* Extra small devices (portrait phones, less than 576px) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 0.625rem;
+  }
+} /* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-size: 1.25rem;
+  }
+} /* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    font-size: 1.25rem;
+  }
+} /* Large devices (desktops, 992px and up) */
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  body {
+    font-size: 1.25rem;
+  }
+} /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.875rem;
+  }
+}
+
 h4,
 h5 {
   font-weight: 600;
@@ -76,6 +77,8 @@ header .btn-group .btn {
 
   width: 0.6em;
   height: 0.6em;
+  
+  font-size: 1em;
 
   border: none;
   border-radius: 0.1em;
@@ -431,6 +434,8 @@ header .btn-group .btn:hover {
 #business .card .card-img-top {
   width: 6em;
   height: 4.4em;
+
+  font-size: 1em;
   margin: auto auto;
 }
 #business .card:first-child .card-img-top {
@@ -452,7 +457,7 @@ header .btn-group .btn:hover {
 #business .card:last-child .card-img-top {
   background: url(../PCweb/img/qiniu@3x.png) no-repeat;
   background-size: cover;
-}
+} /* 定义合作企业区的卡片图像 */
 
 #link {
   margin-top: 2.3em;
@@ -577,6 +582,8 @@ aside {
   width: 1.35em;
   height: 0.6em;
 
+  font-size: 1em;
+
   background: url(../PCweb/img/cooperative/brand@2x.png) no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -656,7 +663,7 @@ aside {
 
 #introduce .scrollspy {
   position: relative;
-  height: 1100px;
+  height: 68rem;
 } /* 滚动监听必须对监听对象添加相对定位 */
 #introduce .scrollspy .card {
   overflow: auto;
