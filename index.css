@@ -504,6 +504,7 @@ header .btn-group .btn:hover {
 #link .col-lg .active {
   color: #999;
   border-bottom: 0.1em solid #26a26f;
+  text-decoration: none;
   cursor: pointer;
 } /* 定义链接的下划线 */
 
