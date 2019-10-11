@@ -323,6 +323,7 @@ header .btn-group .btn:hover {
 #steps .text {
   margin-left: 1em;
   width: 10em;
+  max-width: 150px;
 
   font-size: 0.4em;
   color: #999;
@@ -499,7 +500,9 @@ header .btn-group .btn:hover {
   vertical-align: middle;
 } /* 定义链接前的小圆点样式，因li默认样式的小圆点不包含在col布局内，影响下划线的宽度 */
 
-#link .col-lg a:hover {
+#link .col-lg a:hover,
+#link .col-lg .active {
+  color: #999;
   border-bottom: 0.1em solid #26a26f;
   cursor: pointer;
 } /* 定义链接的下划线 */
@@ -753,6 +756,9 @@ aside {
 #profession-sel .card img {
   width: 3.5em;
   height: 3.5em;
+
+  max-width: 120px;
+  max-height: 120px;
 }
 #profession-sel .card-title {
   margin: 0;
