@@ -753,13 +753,15 @@ aside {
 #profession-sel .media {
   display: inline-block;
 }
+#profession-sel .media-body h5 {
+  display: inline-block;
+}
 #profession-sel .media-body h5,
 #profession-sel .media-body p {
   font-size: 0.4em;
 }
 #profession-sel .card img {
   float: left;
-  display: block;
   width: 3.5em;
   height: 3.5em;
 
