@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+// 定义全局字体、行高以及高光颜色
+
+body {
+  font: {
+    family: "Microsoft YaHei", sans-serif;
+    size: 0.625rem;
+    weight: 400;
+  }
+  line-height: 1.5;
+}
+// 定义body标签下的全局字体样式
+
+@each $font-bp in $bp-keys-list {
+  body {
+    @include respond-to($font-bp) {
+      $i: index($bp-keys-list, $font-bp);
+      font-size: 0.625rem * ($i * 0.8);
+    }
+  }
+}
+// 定义body标签在不同断点下的字体大小
+
+@for $h-numb from 1 through 6 {
+  h#{$h-numb} {
+    font-size: 0.6em - (0.05 * $h-numb);
+    font-weight: 600;
+  }
+}
+// 定义h1~h6的文字大小
+p {
+  font-size: 0.35em;
+}
+// 定义正文的文字大小
+@mixin fs-($f-numb) {
+  font-size: 0.6em - (0.05 * $f-numb);
+}
+// 定义font的1~6等级的文字大小
+
+$fs-btn-lg: 1em;
+// 定义大型按钮的字体大小
+

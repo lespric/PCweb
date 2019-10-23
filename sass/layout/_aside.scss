@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.aside {
+    padding: 0 18.75%;
+    width: 100%;
+    border-top: 1px solid $color-aside-border;
+    background-color: $color-secondary;
+
+    &-text {
+        @include fs-(5);
+        color: $color-light;
+        text-align: center;
+    }
+}
+// 定义底部下侧边的宽和边距值，以及文本样式

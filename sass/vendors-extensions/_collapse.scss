@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+// 定义折叠区的显隐和动效情况
+
+.navbar-collapse {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-align: center;
+  align-items: center;
+}
+// 定义折叠区的flex布局
+
+@each $bp-key in $bp-keys-list {
+  @include respond-to($bp-key) {
+    .collapse-expand-#{$bp-key} {
+      & {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      } // 定义导航栏的布局
+      & .navbar-toggler {
+        display: none;
+      } // 定义导航栏的折叠触发器
+      & .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+      } // 定义导航栏的导航条的布局
+      & .navbar-nav {
+        @include flex-align-center;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 0;
+      } // 定义导航栏的选项的布局
+    }
+  }
+}
+// 定义在不同的分辨率内的flex布局

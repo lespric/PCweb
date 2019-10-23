@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.header {
+    @include flex-align-center;
+    @include flex-justify-between;
+    padding: 0.15em 18.75%;
+
+    width: 100%;
+
+    background-color: $color-light;
+
+    &-text {
+        @include fs-(5);
+        color: $color-primary;
+        white-space: nowrap;
+    }
+}
+// 定义标题栏的标题宽度

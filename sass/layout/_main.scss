@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.main {
+  &-container {
+    padding: 0 18.75%;
+
+    &-title {
+      color: $color-title;
+      text-align: center;
+    }
+  }
+}
+// 定义主体内容的边距值

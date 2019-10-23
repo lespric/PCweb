@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@mixin slide-align($Y-value) {
+  transform: translateY($Y-value);
+  transition: transform 0.2s ease;
+}
+// 定义垂直滑动的动画效果
+@mixin slide-justify($X-value) {
+  transform: translateX($X-value);
+  transition: transform 1s ease;
+}
+// 定义水平滑动的动画效果
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@mixin rotate-360 {
+  animation: rotate 2s linear infinite;
+}
+// 定义无穷旋转的动画效果
+
+@mixin border-bottom-slide($border-width) {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    width: 0;
+    height: 100%;
+
+    border-bottom: $border-width solid $color-light;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  } // 定义导航栏的下划线
+  &:hover:before,
+  &.active:before {
+    left: 0;
+    width: 100%;
+  } // 定义下滑线的展开方式
+  &:hover ~ &:before {
+      left: 0;
+  } // 定义下划线的滑动方向
+}

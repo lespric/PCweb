@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.footer {
+  @include flex-justify-between;
+  padding: 0.5em 18.75%;
+  width: 100%;
+
+  background-color: $color-secondary;
+
+  & a {
+    white-space: nowrap;
+    margin-top: 1em;
+    &:hover {
+      border-bottom: 0.1em solid $color-light;
+    }
+  }
+}
+// 定义底部的宽和边距值，以及链接样式
+
+.footer-left {
+  @include flex-align-between;
+  align-items: flex-start;
+
+  color: $color-light;
+
+  &-divider {
+    margin: 0.5em;
+    height: 1em;
+    border-left: 1px solid $color-light;
+  }
+}
+
+// 定义底部左侧模块的布局和分隔线
+
+.footer-center {
+  @extend .footer-left;
+  &-title {
+    margin-bottom: 1.6em;
+  }
+  &-text {
+    margin-right: 1.6em;
+  }
+}
+// 定义底部中间模块的布局
+
+.footer-right {
+  @extend .footer-left;
+  justify-content: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+
+  @include respond-to(sm) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &-title {
+    margin-bottom: 0;
+  }
+  &-qrcode {
+    width: 6em;
+    height: 6em;
+
+    background: url(../img/qrcode@3x.png) no-repeat;
+    background-size: cover;
+  }
+}
+// 定义底部右侧模块的布局和图片

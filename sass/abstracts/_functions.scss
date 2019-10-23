@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@each $bp-key in $bp-keys-list {
+  @include respond-to($bp-key) {
+    .d-#{$bp-key}-block {
+      display: block!important;
+    }
+    .d-#{$bp-key}-none {
+      display: none!important;
+    }
+  }
+}
+@each $d in $d-list {
+    .d-#{$d} {
+        display: #{$d}!important;
+    }
+}
+// 声明在不同分辨率的显隐情况的条件函数，以及通用显示类
+
+@for $i from 1 through 6 {
+  .main-mt-no#{$i} {
+    margin-top: 4em - 0.5em * ($i - 1);
+  }
+}
+// 声明首页的模块的上外边距的类，并形成规律

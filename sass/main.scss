@@ -1,0 +1,82 @@
+@charset "utf-8";
+// 每个scss文件都要在首行加上，否则中文会编译出错
+
+/*!
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _mixins.scss       # Sass Mixins
+|   |– _placeholder.scss  # Sass Placeholder
+|   |– _functions.scss     # Sass Functions
+|
+|– base/
+|   |– _reset.scss        # Reset
+|   |– _typography.scss   # Typography rules
+|   |– _colors.scss       # Colors' type
+|   |– _animation.scss    # Animation
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+
+|   |– _list.scss         # List-group
+|   |– _forms.scss        # Form & input
+|   |– _cards.scss        # Cards
+|
+|– layout/
+|   |– _body.scss         # Body
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _main.scss         # Main
+|   |– _footer.scss       # Footer
+|   |– _navigation.scss   # Navigation
+|   |– _aside.scss        # Aside
+|
+|– vendors/
+|   |– _normalize.scss    # normalize
+|   |– _glyphicons.scss   # Glyphicons
+|
+|– vendors-extensions/
+|   |– _carousel.scss     # Carousel
+|   |– _collapse.scss     # Collapse
+|   |– _popover.scss      # Popover
+|
+`– main.scss              # Main Sass file
+*/
+
+@import
+  "abstracts/mixins",
+  "abstracts/variables",
+  "abstracts/placeholder",
+  "abstracts/functions";
+
+@import
+  "vendors/normalize",
+  "vendors/glyphicons";
+
+@import
+  "base/reset",
+  "base/typography",
+  "base/colors",
+  "base/animation";
+
+@import
+  "layout/body",
+  "layout/grid",
+  "layout/header",
+  "layout/main",
+  "layout/footer",
+  "layout/navigation",
+  "layout/aside";
+
+@import
+  "components/buttons",
+  "components/list",
+  "components/forms",
+  "components/cards",
+  "components/nav";
+
+@import
+  "vendors-extensions/carousel",
+  "vendors-extensions/collapse",
+  "vendors-extensions/popover";

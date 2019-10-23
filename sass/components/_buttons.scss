@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.header-btn {
+    margin-left: 0.3em;
+    width: 0.7em;
+    height: 0.7em;
+    
+    background: url(../img/sprite/header-btn@3x.png) no-repeat;
+    background-size: cover;
+    @include btn-hover-op(0.5);
+
+    &-group {
+        @include flex-align-center;
+    } // 顶部按钮组
+
+    &-wechat {
+       @extend .header-btn;
+       background-position: 0 0;
+    } // 微信按钮
+    &-qq {
+        @extend .header-btn;
+        background-position: -0.75em 0; 
+    } // qq按钮
+    &-weibo {
+        @extend .header-btn;
+        background-position: -1.5em 0; 
+    } // 微博按钮
+}
+// 定义页面顶部的按钮样式
+

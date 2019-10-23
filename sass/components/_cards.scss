@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+.feature-card {
+  @include flex-column;
+  @include flex-center;
+  padding-top: 0.5em;
+  word-wrap: break-word;
+  line-break: auto;
+
+  &-img {
+    width: 1.6em;
+    height: 1.5em;
+
+    background: url(../img/sprite/main-feature@3x.png) no-repeat;
+    background-size: cover;
+
+    &-1 {
+      @extend .feature-card-img;
+      background-position: 0 0;
+    }
+    &-2 {
+      @extend .feature-card-img;
+      background-position: -1.6em 0;
+    }
+    &-3 {
+      @extend .feature-card-img;
+      background-position: -3.2em 0;
+    }
+  } // 定义卡片组件内图片的样式
+
+  &-body {
+    &-title {
+      color: $color-title;
+      text-align: center;
+    }
+    &-text {
+      padding: 0 6%;
+      color: $color-text;
+    }
+  } // 定义卡片组件的主体内容
+} // 定义特点区卡片组件的位置和布局
+
+.feature-card-people {
+  @extend .feature-card;
+  border-left: 0.05em dashed $color-main-dashed;
+
+  &-body {
+    @include flex-column;
+  }
+  &-row {
+    @extend .row;
+    @include flex-column;
+    margin: 0.25em 0;
+  }
+
+  &-title {
+    @include flex-align-center;
+    color: $color-primary;
+    margin: 0.25em 0;
+  }
+  &-icon {
+    margin-right: 1em;
+    width: 1em;
+    height: 1em;
+
+    background: url(../img/user@3x.png) no-repeat;
+    background-size: cover;
+  }
+  &-text {
+    color: $color-text;
+    margin: 0.25em 0;
+  }
+}
+// 定义特点区的人数卡片的布局和样式
+
+
+
