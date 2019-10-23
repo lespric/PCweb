@@ -73,5 +73,104 @@
 }
 // 定义特点区的人数卡片的布局和样式
 
+.students-card-group {
+  justify-content: space-between;
+} // 定义学生区的卡片组的等分分布布局
+.students-card {
+  @include flex-column;
+  @include flex-align-center;
+  margin: 0.5em 0.25em;
+  margin-bottom: 1em;
 
+  background-color: $color-light;
+  border-radius: 0.1em;
+  box-shadow: 0 0.025em 0.075em $color-box-shadow;
+  
+  &-img {
+    margin-top: 0.4em;
+    width: 3.2em;
+    height: 3.2em;
 
+    background: url(../img/sprite/students-head@3x.png) no-repeat;
+    background-size: cover;
+
+    &-1 {
+      @extend .students-card-img;
+      background-position: 0 0;
+    }
+    &-2 {
+      @extend .students-card-img;
+      background-position: -3.2em 0;
+    }
+    &-3 {
+      @extend .students-card-img;
+      background-position: -6.4em 0;
+    }
+    &-4 {
+      @extend .students-card-img;
+      background-position: -9.6em 0;
+    }
+  } // 定义学生区的卡片的头像
+
+  &-body {
+    padding: 0.25em;
+    &-title {
+      color: $color-title;
+      text-align: center;
+      white-space: nowrap;
+    }
+    &-text {
+      color: $color-text;
+      word-wrap: break-word;
+      line-break: auto;
+    }
+  } // 定义学生区的卡片的介绍内容
+}
+// 定义学生区的卡片的布局和样式
+
+.business-card {
+  height: 4.4em;
+  
+  border-radius: 0.1em;
+  background-color: $color-light;
+  box-shadow: 0 0.025em 0.075em $color-box-shadow;
+  cursor: pointer;
+
+  &:hover {
+    z-index: 1;
+    box-shadow: 0 0.1em 0.3em $color-box-shadow;
+  } // 定义合作企业区的卡片的悬浮状态
+
+  &-img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &-alibaba {
+      @extend .business-card-img;
+      background: url(../img/alibaba@3x.png) no-repeat center;
+      background-size: contain;
+    } // 阿里巴巴图片
+    &-jinshanyun {
+      @extend .business-card-img;
+      background: url(../img/jinshanyun@3x.png) no-repeat center;
+      background-size: contain;
+    } // 金山云图片
+    &-huanxin{
+      @extend .business-card-img;
+      background: url(../img/huanxin@3x.png) no-repeat center;
+      background-size: contain;
+    } // 环信图片
+    &-ronglian {
+      @extend .business-card-img;
+      background: url(../img/ronglian@3x.png) no-repeat center;
+      background-size: contain;
+    } // 容联图片
+    &-qiniu {
+      @extend .business-card-img;
+      background: url(../img/qiniu@3x.png) no-repeat center;
+      background-size: contain;
+    } // 七牛图片
+  } // 定义合作企业区的每个卡片的图像
+}
+// 定义合作企业区的卡片组及每个卡片的布局和样式

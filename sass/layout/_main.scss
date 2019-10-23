@@ -2,9 +2,12 @@
 
 .main {
   &-container {
-    padding: 0 18.75%;
+    margin-left: 18.75%;
+    margin-right: 18.75%;
 
     &-title {
+      margin-top: 0;
+      margin-bottom: 1.7em;
       color: $color-title;
       text-align: center;
     }

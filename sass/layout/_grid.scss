@@ -106,3 +106,9 @@ $grid-gutter-width: 0;
   }
 }
 // 定义在各个分辨率下各自的栅格系统
+
+.col-divider {
+  display: none;
+  width: 100%;
+}
+// 定义栅格系统的分隔线

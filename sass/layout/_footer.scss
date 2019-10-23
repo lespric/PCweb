@@ -50,12 +50,14 @@
   margin-right: auto;
 
   @include respond-to(sm) {
+    align-items: center;
     margin-left: auto;
     margin-right: 0;
   }
 
   &-title {
     margin-bottom: 0;
+    white-space: nowrap;
   }
   &-qrcode {
     width: 6em;
