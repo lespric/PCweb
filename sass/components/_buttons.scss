@@ -1,30 +1,66 @@
 @charset "utf-8";
 
 .header-btn {
-    margin-left: 0.3em;
-    width: 0.7em;
-    height: 0.7em;
-    
-    background: url(../img/sprite/header-btn@3x.png) no-repeat;
-    background-size: cover;
-    @include btn-hover-op(0.5);
+  margin-left: 0.3em;
+  width: 0.7em;
+  height: 0.7em;
 
-    &-group {
-        @include flex-align-center;
-    } // 顶部按钮组
+  background: url(../img/sprite/header-btn@3x.png) no-repeat;
+  background-size: cover;
+  @include btn-hover-op(0.5);
 
-    &-wechat {
-       @extend .header-btn;
-       background-position: 0 0;
-    } // 微信按钮
-    &-qq {
-        @extend .header-btn;
-        background-position: -0.75em 0; 
-    } // qq按钮
-    &-weibo {
-        @extend .header-btn;
-        background-position: -1.5em 0; 
-    } // 微博按钮
+  &-group {
+    @include flex-align-center;
+  } // 顶部按钮组
+
+  &-wechat {
+    @extend .header-btn;
+    background-position: 0 0;
+  } // 微信按钮
+  &-qq {
+    @extend .header-btn;
+    background-position: -0.75em 0;
+  } // qq按钮
+  &-weibo {
+    @extend .header-btn;
+    background-position: -1.5em 0;
+  } // 微博按钮
 }
 // 定义页面顶部的按钮样式
 
+.profession-backtop {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+
+  @include flex-justify-center;
+  width: 2em;
+  height: 2em;
+  min-width: 48px;
+  min-height: 48px;
+
+  border-radius: 0.5em;
+  background-color: $color-primary;
+  @include box-shadow;
+
+  &-icon {
+    display: inline-block;
+    margin-top: 0.5em;
+    width: 0;
+    height: 0;
+
+    border: 0.5em solid transparent;
+    border-bottom: 0.5em solid $color-light;
+    border-top: none;
+
+    &:after {
+      @include absolute-justify-center;
+      top: 1.2em;
+      content: "";
+      display: inline-block;
+      width: 1em;
+      border-top: 0.2em solid $color-light;
+    }
+  } // 定义返回顶部按钮的图标
+}
+// 定义返回顶部按钮的布局和样式

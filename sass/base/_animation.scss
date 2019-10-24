@@ -1,38 +1,13 @@
 @charset "utf-8";
 
-@mixin slide-align($Y-value) {
-  transform: translateY($Y-value);
-  transition: transform 0.2s ease;
-}
-// 定义垂直滑动的动画效果
-@mixin slide-justify($X-value) {
-  transform: translateX($X-value);
-  transition: transform 1s ease;
-}
-// 定义水平滑动的动画效果
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@mixin rotate-360 {
-  animation: rotate 2s linear infinite;
-}
-// 定义无穷旋转的动画效果
-
 @mixin border-bottom-slide($border-width) {
   &:before {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 100%;
 
     width: 0;
-    height: 100%;
 
     border-bottom: $border-width solid $color-light;
     -webkit-transition: all 0.2s linear;
@@ -44,6 +19,43 @@
     width: 100%;
   } // 定义下滑线的展开方式
   &:hover ~ &:before {
-      left: 0;
+    left: 0;
   } // 定义下划线的滑动方向
 }
+
+@mixin transform-3d {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  @extend %clearfix;
+  transform-style: preserve-3d;
+
+  &-font {
+    float: left;
+    margin-right: -100%; // 使布局变为左右布局
+    width: 100%;
+  
+    // -webkit-backface-visibility: hidden;
+    // backface-visibility: hidden; // 使翻转的背面的隐藏
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+
+    transform-origin: left center;
+    // 定义旋转中心在左边中间点
+  }
+
+  &-back {
+    float: left;
+    margin-right: -100%; // 使布局变为左右布局
+    width: 100%;
+  
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; // 使翻转的背面的隐藏
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+
+    transform-origin: right center;
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+}
+// 定义隐藏元素以3d翻转显示的动画效果

@@ -1,39 +1,52 @@
 @charset "utf-8";
 
 .navbar-nav {
-    @include flex-column;
-    @include flex-align-center;
-    position: relative;
-    margin: 0;
+  @include flex-column;
+  @include flex-align-center;
+  position: relative;
+  margin: 0;
 
-    &-item {
-        position: relative;
-        @include flex-center;
-        width: 2.5em;
-        height: 2.5em;
-        cursor: pointer;
-        @include border-bottom-slide(0.1em);
-    }
-    &-link {
-        @include fs-(4);
-        color: $color-light;
-    }
+  &-item {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+
+    @include border-bottom-slide(0.1em);
+  }
+  &-link {
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    @include fs-(4);
+    color: $color-light;
+  }
 }
 // 定义导航栏的导航条及选项
 
-.navbar-toggler {
-    margin: 0.35em 0;
-    width: 1.8em;
-    height: 1.8em;
+.profession-nav {
+  @include flex-align-center;
+  flex-wrap: wrap;
 
-    border: 0.2em solid $color-light;
-    border-radius: 0.25em;
-    @include btn-hover-op(0.5);
+  border-top: 1px solid $color-border-primary;
+  border-bottom: 1px solid $color-border-secondary;
 
-    &-icon {
-       font-size: $fs-btn-lg;
-       color: $color-light;
-       text-align: center;
+  & .nav-item {
+    margin: 1.5em;
+    margin-left: 0;
+    @include fs-(5);
+    color: $color-text;
+    white-space: nowrap;
+  } // 定义职业选择区的导航选项
+  & .nav-link {
+    padding: 0 0.2em;
+    color: $color-title;
+
+    &.active,
+    &:hover {
+      color: $color-light;
+      background-color: $color-primary;
+      border-radius: 0.2em;
     }
+  } // 定义职业选择区的导航链接
 }
-// 定义导航栏的折叠触发器
+// 定义职业选择区的导航条

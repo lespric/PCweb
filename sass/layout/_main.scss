@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 .main {
+  width: 100%;
+
   &-container {
     margin-left: 18.75%;
     margin-right: 18.75%;
@@ -11,6 +13,19 @@
       color: $color-title;
       text-align: center;
     }
+  } // 定义主体内容的边距值，以及标题
+
+  &-banner {
+    width: 100%;
+  } // 定义主体内容的广告图宽度
+}
+// 定义主体内容的宽度值
+
+.main {
+  & .introduce {
+    @extend .main-container;
+    align-items: flex-start;
+    margin-bottom: 5.8em;
   }
 }
-// 定义主体内容的边距值
+// 定义主体内容区的品牌介绍区模块的整体布局

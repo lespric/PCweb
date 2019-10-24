@@ -2,7 +2,6 @@
 
 // 1. 定义面包屑导航为flex弹性布局
 // 2. 定义面包屑导航的边距值
-// 3. 定义面包屑导航的外观样式
 
 .breadcrumb {
   display: -ms-flexbox;
@@ -10,32 +9,35 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; // 1
 
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem; // 2
-  
-  list-style: none;
-  background-color: #e9ecef;
-  border-radius: 0.25rem;  // 3
+  margin-top: 0.6em;
+  margin-bottom: 0.8em; // 2
 }
 
-.breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem;
-  @at-root &::before {
-    display: inline-block;
-    padding-right: 0.5rem;
+.breadcrumb-item {
+  @include fs-(4);
+  & a {
+    color: $color-title;
+  }
+} // 定义面包屑导航的导航选项字体大小以及颜色
 
-    color: #6c757d;
-    content: "/";
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.25em;
+  &::before {
+    display: inline-block;
+    padding-right: 0.1em;
+
+    color: $color-title;
+    content: ">";
   }
   // 定义面包屑导航之间的边距值，以及分割的符号
 
-  @at-root &:hover::before {
+  &:hover::before {
     text-decoration: none;
   }
 }
 // 定义面包屑导航悬浮状态的样式
 
 .breadcrumb-item.active {
-  color: #6c757d;
+  color: $color-primary;
 }
 // 定义面包屑导航点击状态的样式

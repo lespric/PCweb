@@ -57,3 +57,51 @@
   }
 }
 // 定义在不同的分辨率内的flex布局
+
+.nav {
+  & .navbar-toggler {
+    margin: 0.35em 0;
+    width: 1.8em;
+    height: 1.8em;
+
+    border: 0.2em solid $color-light;
+    border-radius: 0.25em;
+    @include btn-hover-op(0.5);
+
+    &-icon {
+      font-size: $fs-btn-lg;
+      color: $color-light;
+      text-align: center;
+    }
+  }
+  // 定义导航栏的折叠触发器
+}
+
+.introduce {
+  & .navbar-toggler {
+    padding: 1em 0;
+    width: 100%;
+
+    @include fs-(1);
+    color: $color-title;
+    font-weight: 600;
+
+    background-color: $color-light;
+    @include box-shadow;
+    border-radius: 0.2em;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      margin-left: 0.5em;
+      width: 0;
+      height: 0;
+
+      border: 0.5em solid transparent;
+      border-top: 0.5em solid $color-title;
+      border-bottom: none;
+    }
+    // 定义下拉小三角，通过宽高为0，隐藏左右和下边，得上边的小三角
+  }
+}
+// 定义品牌介绍区的折叠触发器，以及下拉小三角

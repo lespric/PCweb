@@ -17,89 +17,86 @@
     <meta name="format-detection" content="telephone=no,email=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <link rel="stylesheet" href="../PCweb/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../PCweb/sass/main.css" />
   </head>
 
-  <body>
-    <header class="align-items-center">
-      <span class="phone"
-        >客服热线：
-        <span href="tel:01059478634"> 010-594-78634</span>
-      </span>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn"></button>
-        <button
-          id="weixin"
-          type="button"
-          class="btn"
-          data-toggle="popover"
-          data-placement="bottom"
-          data-trigger="hover"
-          title="微信公众平台"
-          data-content=" "
-        ></button>
-        <button type="button" class="btn"></button>
-      </div>
-    </header>
-    <!--顶部联系方式栏-->
-
-    <nav class="navbar navbar-expand-sm navbar-dark" id="navbar-top">
-      <a class="navbar-brand mr-auto" href="index.html"></a>
-      <button
-        class="navbar-btn navbar-toggler ml-auto"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="true"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse in" id="navbarNav">
-        <ul class="navbar-nav ml-sm-auto">
-          <li class="nav-item w-100">
-            <a class="nav-link active" href="#"
-              >首页 <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item w-100">
-            <a class="nav-link" href="porfession.html">职业</a>
-          </li>
-          <li class="nav-item w-100">
-            <a class="nav-link" href="#">推荐</a>
-          </li>
-          <li class="nav-item w-100">
-            <a class="nav-link" href="#">关于</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <body class="body">
+      <header class="header">
+          <span class="header-text"
+            >客服热线：
+            <span href="tel:01059478634"> 010-594-78634</span>
+          </span>
+          <div class="header-btn-group" role="group" aria-label="Basic example">
+            <button class="header-btn-wechat" type="button"></button>
+            <button
+              class="header-btn-qq"
+              type="button"
+              data-toggle="popover"
+              data-placement="bottom"
+              data-trigger="hover"
+              title="微信公众平台"
+              data-content=" "
+            ></button>
+            <button class="header-btn-weibo" type="button"></button>
+          </div>
+        </header>
+        <!--顶部联系方式栏-->
+    
+        <nav class="nav collapse-expand-sm">
+          <a class="nav-brand" href="index.html"></a>
+          <button
+            class="navbar-btn navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="true"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav list-unstyled">
+              <li class="navbar-nav-item active">
+                <a class="navbar-nav-link" href="index.html"
+                  >首页</span>
+                </a>
+              </li>
+              <li class="navbar-nav-item">
+                <a class="navbar-nav-link" href="profession.html">职业</a>
+              </li>
+              <li class="navbar-nav-item">
+                <a class="navbar-nav-link" href="#">推荐</a>
+              </li>
+              <li class="navbar-nav-item">
+                <a class="navbar-nav-link" href="#">关于</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
     <!--导航栏-->
 
-    <main>
+    <main class="main">
       <img
         src="../PCweb/img/cooperative/banner@2x.png"
         alt="banner image"
-        class="img-fluid w-100"
+        class="main-banner"
       />
       <!--banner广告区-->
 
-      <article id="content">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb m-0">
+        <article class="main-container" aria-label="breadcrumb">
+          <ol class="breadcrumb list-unstyled">
             <li class="breadcrumb-item"><a href="index.html">首页</a></li>
-            <li class="breadcrumb-item active p-0" aria-current="page">
+            <li class="breadcrumb-item active" aria-current="page">
               合作企业
             </li>
           </ol>
-        </nav>
+        </article>
         <!--面包屑导航-->
 
-        <section class="navbar-expand-lg row no-gutters" id="introduce">
+        <article class="introduce collapse-expand-lg row">
           <button
-            class="btn navbar-toggle w-100 d-lg-none shadow-sm"
+            class="navbar-toggler d-lg-none"
             type="button"
             data-toggle="collapse"
             data-target="#brand-nav"
@@ -108,13 +105,13 @@
             aria-label="Toggle navigation"
           >
             合作企业
-            <span class="dropdown-toggle ml-2"></span>
           </button>
           <!--品牌选择链接区，折叠按钮-->
-          <div class="align-items-start collapse navbar-collapse in" id="brand-nav">
-            <div id="brand-list" class="list-group text-nowrap text-center shadow-sm rounded">
-              <h4 class="list-group-item d-none d-lg-block">合作企业</h4>
-              <a class="list-group-item mt-3 active" href="#alibaba-1">阿里巴巴&emsp;</a>
+
+          <div class="brands collapse navbar-collapse" id="brand-nav">
+            <div class="list-group" id="brands-list">
+              <h4 class="list-group-header d-lg-block">合作企业</h4>
+              <a class="list-group-item active" href="#alibaba-1">阿里巴巴&emsp;</a>
               <a class="list-group-item" href="#tencent-2">腾讯视频&emsp;</a>
               <a class="list-group-item" href="#tudou-3">土豆网&emsp;&emsp;</a>
               <a class="list-group-item" href="#putaoteng-4">北京葡萄藤</a>
@@ -125,47 +122,44 @@
               <a class="list-group-item" href="#qiniu-9">七牛&emsp;&emsp;&emsp;</a>
               <a class="list-group-item" href="#alibaba-10">阿里巴巴&emsp;</a>
               <a class="list-group-item" href="#putaoteng-11">北京葡萄藤</a>
-              <a class="list-group-item mb-3" href="#alibaba-12">阿里巴巴&emsp;</a>
+              <a class="list-group-item" href="#alibaba-12">阿里巴巴&emsp;</a>
             </div>
           </div>
           <!--品牌选择链接区，滚动监听作用-->
 
-          <div
-            class="scrollspy ml-lg-2 overflow-hidden shadow-sm rounded w-100" 
-            data-spy="scroll"
-            data-target="#brand-list"
-            data-offset="60"
+          <div 
+          class="introduce-scrollspy"
+          data-spy="scroll"
+          data-target="#brands-list"
+          data-offset="60"
           >
-            <div class="card" id="alibaba-1">
-              <div class="card-body">
-                <h4 class="card-title">阿里巴巴-1</h4>
-                <p class="card-text">...</p>
+            <div class="introduce-card" id="alibaba-1">
+              <div class="introduce-card-header">
+                阿里巴巴-1
+              </div>
+              <div class="introduce-card-body">
               </div>
             </div>
-            <div class="card" id="tencent-2">
-                <div class="card-body">
-                  <h4 class="card-title">腾讯视频-2</h4>
-                  <p class="card-text">...</p>
-                </div>
+            <div class="introduce-card" id="tencent-2">
+              <div class="introduce-card-header">
+                  腾讯视频-2
+              </div>
+              <div class="introduce-card-body">
+              </div>
             </div>
 
-            <div class="card" id="tudou-3">
-                <div class="card-body">
-                  <h4 class="card-title media d-inline-block">
-                    <img
-                      class="align-self-start mr-2 float-left"
-                      src="../PCweb/img/cooperative/tudou@2x.png"
-                      alt="Generic placeholder image"
-                    />
-                    <div class="media-body">
-                      土豆网公司成立于1998年11月，
-                      是目前中国最大的互联网综合服务提供商之一，也是中国
-                      服务用户最多的互联网企业之一。成立10多年以来，腾讯一直秉承一切以用户价值为依归的
-                      经营理念，始终处于稳健、高速发展的状态。2004年6月16日，腾讯公司在香港联交所主板
-                      公开上市（股票代号700）。
-                    </div>
-                  </h4>
-                  <div class="card-text">
+            <div class="introduce-card" id="tudou-3">
+              <div class="introduce-card-header">
+                <div class="introduce-card-header-img"></div>
+                <p class="introduce-card-header-text">
+                    土豆网公司成立于1998年11月，
+                    是目前中国最大的互联网综合服务提供商之一，也是中国
+                    服务用户最多的互联网企业之一。成立10多年以来，腾讯一直秉承一切以用户价值为依归的
+                    经营理念，始终处于稳健、高速发展的状态。2004年6月16日，腾讯公司在香港联交所主板
+                    公开上市（股票代号700）。
+                </p>
+              </div>
+                <div class="introduce-card-body">
                     <p>
                         &emsp;&emsp;土豆是中国最早和最具影响力的网络视频平台，是中国网络视频行业的领军品牌。其前身土豆网于2005年4月15日
                         正式上线，是全球最早上线的视频网站之一。2014年1月，“土豆网”正式更名为“土豆”，标志着土豆进入品牌发展
@@ -198,115 +192,128 @@
                         土豆移动端获得了高速增长，月均覆盖用户较当年3月增长11倍，平均增长率超过40%；月均视频播放量增长23倍，月
                         平均增幅达60%。                        
                     </p>
-                  </div>
                 </div>
             </div>
 
-            <div class="card" id="putaoteng-4">
-                <div class="card-body">
-                  <h4 class="card-title">北京葡萄藤-4</h4>
-                  <p class="card-text">...</p>
+            <div class="introduce-card" id="putaoteng-4">
+              <div class="introduce-card-header">
+                  北京葡萄藤-4
+              </div>
+              <div class="introduce-card-body">
+              </div>
+            </div>
+  
+            <div class="introduce-card" id="alibaba-5">
+                <div class="introduce-card-header">
+                    阿里巴巴-5
+                </div>
+                <div class="introduce-card-body">
                 </div>
             </div>
-            <div class="card" id="alibaba-5">
-                <div class="card-body">
-                  <h4 class="card-title">阿里巴巴-5</h4>
-                  <p class="card-text">...</p>
+
+            <div class="introduce-card" id="jinshanyun-6">
+                <div class="introduce-card-header">
+                    金山云-6
                 </div>
+                <div class="introduce-card-body">
             </div>
-            <div class="card" id="jinshanyun-6">
-                <div class="card-body">
-                  <h4 class="card-title">金山云-6</h4>
-                  <p class="card-text">...</p>
-                </div>
             </div>
-           <div class="card" id="huanxin-7">
-                <div class="card-body">
-                  <h4 class="card-title">环信-7</h4>
-                  <p class="card-text">...</p>
+
+            <div class="introduce-card" id="huanxin-7">
+                <div class="introduce-card-header">
+                    环信-7
                 </div>
+                <div class="introduce-card-body">
             </div>
-            <div class="card" id="ronglian-8">
-                <div class="card-body">
-                  <h4 class="card-title">容联-8</h4>
-                  <p class="card-text">...</p>
-                </div>
             </div>
-            <div class="card" id="qiniu-9">
-                <div class="card-body">
-                  <h4 class="card-title">七牛-9</h4>
-                  <p class="card-text">...</p>
+
+            <div class="introduce-card" id="ronglian-8">
+                <div class="introduce-card-header">
+                    容联-8
                 </div>
+                <div class="introduce-card-body">
             </div>
-            <div class="card" id="alibaba-10">
-                <div class="card-body">
-                  <h4 class="card-title">阿里巴巴-10</h4>
-                  <p class="card-text">...</p>
-                </div>
             </div>
-            <div class="card" id="putaoteng-11">
-                <div class="card-body">
-                  <h4 class="card-title">北京葡萄藤-11</h4>
-                  <p class="card-text">...</p>
+
+            <div class="introduce-card" id="qiniu-9">
+                <div class="introduce-card-header">
+                    七牛-9
                 </div>
+                <div class="introduce-card-body">
             </div>
-            <div class="card" id="alibaba-12">
-                <div class="card-body">
-                  <h4 class="card-title">阿里巴巴-12</h4>
-                  <p class="card-text">...</p>
+            </div>
+
+            <div class="introduce-card" id="alibaba-10">
+                <div class="introduce-card-header">
+                   阿里巴巴-10
                 </div>
+                <div class="introduce-card-body">
+            </div>
+            </div>
+
+            <div class="introduce-card" id="putaoteng-11">
+                <div class="introduce-card-header">
+                   北京葡萄藤-11
+                </div>
+                <div class="introduce-card-body">
+            </div>
+            </div>
+
+            <div class="introduce-card" id="alibaba-12">
+                <div class="introduce-card-header">
+                   阿里巴巴-12
+                </div>
+                <div class="introduce-card-body">
+            </div>
             </div>
           </div>
-        </section>
+        </article>
         <!--品牌选择文本区-->
-      </article>
       <!--战略合作企业介绍区-->
     </main>
 
-    <footer>
-        <article class="container">
-          <section class="row">
-            <div class="col-md-4">
-              <h5>
-                技能树 — 改变你我
-              </h5>
-              <p class="text-nowrap">
-                <a>关于我们</a>
-                <span class="divider"></span>
-                <a>联系我们</a>
-                <span class="divider"></span>
-                <a href="cooperative.html">合作企业</a>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h5>
-                旗下网站
-              </h5>
-              <p class="text-nowrap">
-                <a>草船云孵化器</a>
-                <a>最强IT特训营</a>
-              </p>
-              <p class="text-nowrap">
-                <a>葡萄藤轻游戏</a>
-                <a>桌游精灵</a>
-              </p>
-            </div>
-            <div class="col-md-2 ml-md-auto">
-              <h5 class="text-nowrap">
-                微信公众平台
-              </h5>
-              <p class="qrcode"></p>
-            </div>
-          </section>
-        </article>
-        <!--页脚板块-->
+    <footer class="footer row no-gutters">
+        <div class="footer-left col-sm-4">
+          <h4>
+            技能树 — 改变你我
+          </h4>
+          <p>
+            <a>关于我们</a>
+            <span class="footer-left-divider"></span>
+            <a>联系我们</a>
+            <span class="footer-left-divider"></span>
+            <a href="cooperative.html">合作企业</a>
+          </p>
+        </div>
+            
+        <div class="footer-center col-sm-4">
+          <h4 class="footer-center-title">
+            旗下网站
+          </h4>
+          <p>
+            <a class="footer-center-text">草船云孵化器</a>
+            <a class="footer-center-text">最强IT特训营</a>
+          </p>
+          <p>
+            <a class="footer-center-text">葡萄藤轻游戏</a>
+            <a class="footer-center-text">桌游精灵</a>
+          </p>
+        </div>
+  
+        <div class="footer-right col-sm-2">
+          <h4 class="footer-right-title">
+            微信公众平台
+          </h4>
+          <p class="footer-right-qrcode"></p>
+        </div>
       </footer>
-
-    <aside class="text-center">
-      Copyright © 2015技能树 www.jnshu.com All Rights Reserved |
-      京ICP备13005880号
-    </aside>
-    <!--安全备案板块-->
+      <!--页脚板块-->
+  
+      <aside class="aside aside-text">
+        Copyright © 2015技能树 www.jnshu.com All Rights Reserved |
+        京ICP备13005880号
+      </aside>
+      <!--安全备案板块-->
 
     <script src="../PCweb/bootstrap/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -316,6 +323,6 @@
         $(function() {
           $('[data-toggle="popover"]').popover();
         }); //弹出提示框的触发条件
-      </script>
+    </script>
   </body>
 </html>

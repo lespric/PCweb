@@ -127,7 +127,7 @@
  
     border-radius: 50%;
     background-color: $color-light;
-    box-shadow: 0 0.1em 0.15em $color-box-shadow;
+    @include box-shadow(0.1em, 0.15em);
     opacity: 1;
     cursor: pointer;
   }

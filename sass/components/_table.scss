@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.profession-table {
+  width: 100%;
+  & th {
+    padding: 1em;
+    color: $color-text;
+    font-weight: 600;
+
+    // 定义职业选择区的表格的标题
+    // 1. 横向合并单元格的字体大小差别
+    // 2. 非纵向合并单元格的左对齐
+    // 3. 标题单元格中的标题和内容的字体颜色和边距差别
+
+    &:not(.colspan) {
+      @include fs-(6);
+    }
+    &.colspan {
+      @include fs-(5);
+      color: $color-title;
+    } // 1
+
+    &:not(.rowspan) {
+      text-align: left;
+    } // 2
+
+    & .th-title {
+      margin-right: 0.5em;
+    }
+    & .th-text {
+      color: $color-title;
+    } // 3
+  } // 定义职业选择区的表格的标题单元格
+
+  & td {
+    @include flex-justify-between;
+    padding: 1em 2em;
+
+    color: $color-title;
+    white-space: nowrap;
+
+    &:not(.colspan) {
+      @include fs-(6);
+    }
+    &.colspan {
+      @include fs-(5);
+      font-weight: 600;
+    }
+  } // 定义职业选择区的表格的内容单元格
+
+  & .text-info {
+    color: $color-info;
+    white-space: nowrap;
+  }
+  // 定义职业选择区的表格的提醒信息
+
+  & thead {
+    & .icon-star {
+      display: inline-block;
+      margin: 0 0.2em;
+      width: 1.35em;
+      height: 1.25em;
+
+      background: url(../img/profession/star@2x.png) no-repeat;
+      background-size: cover;
+    }
+  }
+  // 定义标题单元格中的星星符号
+}
+// 定义职业选择区的表格的文字样式
+
+.profession-table {
+  &,
+  & th,
+  & td {
+    border-top: 1px solid $color-border-secondary;
+  } // 定义上边
+  & th:nth-child(2),
+  & td {
+    border-left: 1px solid $color-border-secondary;
+  } // 定义左边
+}
+// 定义职业选择区的表格边框

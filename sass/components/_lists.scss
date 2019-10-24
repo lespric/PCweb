@@ -24,7 +24,7 @@
 
     background-color: $color-light;
     border-radius: 50%;
-    box-shadow: 0 0.1em 0.3em $color-box-shadow;
+    @include box-shadow(0.1em, 0.3em);
   } // 定义步骤区的每个步骤的前置图形
 
   &-text {
@@ -88,3 +88,66 @@
   }
 }
 // 定义友情链接区的布局和样式
+
+.brands {
+  & .list-group {
+    @include flex-column;
+    @include flex-justify-center;
+    
+    text-align: center;
+    background-color: $color-light;
+    border-radius: 0.1em;
+    @include box-shadow;
+  } // 定义品牌区的列表组的整体布局和样式
+
+  & .list-group-header {
+    display: none;
+    margin: 0;
+    padding: 1.5em 0;
+    width: 100%;
+
+    color: $color-title;
+    text-align: center;
+    white-space: nowrap;
+
+    border-bottom: 0.1em solid $color-list-border;
+  }
+
+  & .list-group-item {
+    @include flex-center;
+    margin: 1em 5em;
+
+    @include fs-(5);
+    color: $color-primary;
+    white-space: nowrap;
+
+    &:nth-child(2) {
+      margin-top: 2em;
+    }
+    &:last-child {
+      margin-bottom: 2em; 
+    } // 定义第一个品牌和最后一个品牌的外边距
+
+    &:before {
+      content: "";
+      display: inline-block;
+      margin-right: 0.5em;
+
+      width: 0.6em;
+      height: 0.6em;
+      
+      border: 0.1em solid $color-active;
+      border-radius: 50%;
+    } // 定义品牌区的各个选项的样式和前置符号
+
+    &:hover,
+    &.active {
+      color: $color-active;
+
+      &:before {
+        background-color: $color-active;
+      }
+    } // 定义品牌区的各个选项的悬浮状态及点击状态
+  }
+}
+// 定义品牌区的列表组

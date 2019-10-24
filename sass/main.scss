@@ -18,10 +18,13 @@ sass/
 |
 |– components/
 |   |– _buttons.scss      # Buttons
-
 |   |– _list.scss         # List-group
 |   |– _forms.scss        # Form & input
 |   |– _cards.scss        # Cards
+|   |– _nav.scss          # Nav
+|   |– _breadcrumb.scss   # Breadcrumb
+|   |– _scrollspy.scss    # Scrollspy
+|   |– _table.scss        # Table
 |
 |– layout/
 |   |– _body.scss         # Body
@@ -40,6 +43,7 @@ sass/
 |   |– _carousel.scss     # Carousel
 |   |– _collapse.scss     # Collapse
 |   |– _popover.scss      # Popover
+|   |– _scrollspy.scss    # Scrollspy
 |
 `– main.scss              # Main Sass file
 */
@@ -74,7 +78,10 @@ sass/
   "components/lists",
   "components/forms",
   "components/cards",
-  "components/nav";
+  "components/nav",
+  "components/breadcrumb",
+  "components/scrollspy",
+  "components/table";
 
 @import
   "vendors-extensions/carousel",

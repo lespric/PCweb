@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+@each $d in $d-list {
+  .d-#{$d} {
+      display: #{$d}!important;
+  }
+}
 @each $bp-key in $bp-keys-list {
   @include respond-to($bp-key) {
     .d-#{$bp-key}-block {
@@ -10,12 +15,7 @@
     }
   }
 }
-@each $d in $d-list {
-    .d-#{$d} {
-        display: #{$d}!important;
-    }
-}
-// 声明在不同分辨率的显隐情况的条件函数，以及通用显示类
+// 声明通用显示类，以及在不同分辨率的显隐情况的条件函数，声明顺序不能倒转
 
 @for $i from 1 through 6 {
   .main-mt-no#{$i} {

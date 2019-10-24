@@ -131,5 +131,8 @@
 }
 // 声明按钮的悬浮状态的混合宏
 
-
+@mixin box-shadow($offset: 0.25em, $effect: 0.75em) {
+  box-shadow: 0 $offset $effect $color-box-shadow;
+}
+// 定义阴影的混合宏
 
