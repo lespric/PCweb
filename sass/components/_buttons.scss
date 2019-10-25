@@ -28,23 +28,28 @@
 }
 // 定义页面顶部的按钮样式
 
-.profession-backtop {
+.backtop {
   position: fixed;
   bottom: 2em;
   right: 2em;
+  display: none;
 
-  @include flex-center;
   width: 2em;
   height: 2em;
   min-width: 48px;
   min-height: 48px;
 
+  text-align: center;
   border-radius: 0.5em;
   background-color: $color-primary;
   @include box-shadow;
 
+  @include btn-hover-darken($color-primary);
+
   & .glyphicon-eject {
     font-size: 1.5rem;
+    height: 100%;
+    @include flex-center;
   } // 定义返回顶部按钮的图标
 }
 // 定义返回顶部按钮的布局和样式

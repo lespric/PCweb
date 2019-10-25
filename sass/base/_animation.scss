@@ -22,6 +22,7 @@
     left: 0;
   } // 定义下划线的滑动方向
 }
+// 声明底边随鼠标移动而滑动的效果
 
 @mixin transform-3d {
   position: relative;
@@ -30,32 +31,35 @@
   @extend %clearfix;
   transform-style: preserve-3d;
 
-  &-font {
+  &-front,
+  &-back {
     float: left;
     margin-right: -100%; // 使布局变为左右布局
     width: 100%;
-  
-    // -webkit-backface-visibility: hidden;
-    // backface-visibility: hidden; // 使翻转的背面的隐藏
-    transition: -webkit-transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out;
 
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &-front {
     transform-origin: left center;
     // 定义旋转中心在左边中间点
   }
 
   &-back {
-    float: left;
-    margin-right: -100%; // 使布局变为左右布局
-    width: 100%;
-  
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; // 使翻转的背面的隐藏
-    transition: -webkit-transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out;
 
     transform-origin: right center;
     transform: translateX(-100%) rotateY(-180deg);
+  } // 定义旋转中心在右边中间点，并通过transform来默认隐藏
+
+  &:hover  &-front {
+    transform: translateX(100%) rotateY(180deg);
   }
+  &:hover  &-back {
+    transform: translateX(0) rotateY(0);
+  }
+  // 定义在悬浮状态下的3d翻转变化
 }
-// 定义隐藏元素以3d翻转显示的动画效果
+// 声明隐藏元素以3d翻转显示的动画效果

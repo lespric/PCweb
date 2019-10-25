@@ -6,7 +6,7 @@ sass/
 |   |– _variables.scss    # Sass Variables
 |   |– _mixins.scss       # Sass Mixins
 |   |– _placeholder.scss  # Sass Placeholder
-|   |– _functions.scss     # Sass Functions
+|   |– _functions.scss    # Sass Functions
 |
 |– base/
 |   |– _reset.scss        # Reset
@@ -16,13 +16,12 @@ sass/
 |
 |– components/
 |   |– _buttons.scss      # Buttons
-|   |– _list.scss         # List-group
-|   |– _forms.scss        # Form & input
+|   |– _lists.scss        # List-group
 |   |– _cards.scss        # Cards
-|   |– _nav.scss          # Nav
+|   |– _navs.scss         # Navs
 |   |– _breadcrumb.scss   # Breadcrumb
 |   |– _scrollspy.scss    # Scrollspy
-|   |– _table.scss        # Table
+|   |– _tables.scss       # Tables
 |
 |– layout/
 |   |– _body.scss         # Body
@@ -41,7 +40,6 @@ sass/
 |   |– _carousel.scss     # Carousel
 |   |– _collapse.scss     # Collapse
 |   |– _popover.scss      # Popover
-|   |– _scrollspy.scss    # Scrollspy
 |
 `– main.scss              # Main Sass file
 */
@@ -1132,7 +1130,7 @@ textarea:focus {
   background: none; }
 
 .list-no-indent {
-  padding-left: 1em; }
+  padding-left: 0; }
 
 .list-unstyled {
   padding-left: 0;
@@ -1205,7 +1203,7 @@ p {
 
 .body {
   position: relative;
-  background-color: #fafafa; }
+  background-color: #FAFAFA; }
 
 .container {
   width: 100%;
@@ -1742,22 +1740,27 @@ p {
   .header-btn-weibo {
     background-position: -1.5em 0; }
 
-.profession-backtop {
+.backtop {
   position: fixed;
   bottom: 2em;
   right: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   width: 2em;
   height: 2em;
   min-width: 48px;
   min-height: 48px;
+  text-align: center;
   border-radius: 0.5em;
   background-color: #29B078;
   box-shadow: 0 0.25em 0.75em rgba(8, 1, 3, 0.15); }
-  .profession-backtop .glyphicon-eject {
-    font-size: 1.5rem; }
+  .backtop:hover {
+    background-color: #165d40; }
+  .backtop .glyphicon-eject {
+    font-size: 1.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .steps-list-group {
   display: flex;
@@ -2022,7 +2025,28 @@ p {
   margin-top: 1.2em;
   border-radius: 0.1em;
   background-color: #FFF;
-  box-shadow: 0 0.25em 0.75em rgba(8, 1, 3, 0.15); }
+  box-shadow: 0 0.25em 0.75em rgba(8, 1, 3, 0.15);
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  transform-style: preserve-3d; }
+  .profession-card-front, .profession-card-back {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out; }
+  .profession-card-front {
+    transform-origin: left center; }
+  .profession-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-origin: right center;
+    transform: translateX(-100%) rotateY(-180deg); }
+  .profession-card:hover .profession-card-front {
+    transform: translateX(100%) rotateY(180deg); }
+  .profession-card:hover .profession-card-back {
+    transform: translateX(0) rotateY(0); }
   .profession-card-header {
     padding: 0.4em 0.2em; }
     .profession-card-header-img {
@@ -2055,9 +2079,7 @@ p {
     padding: 0 1.2em;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.76);
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
+    background-color: rgba(0, 0, 0, 0.76); }
     .profession-card-back-title {
       color: #FFF;
       text-align: center; }
@@ -2067,32 +2089,6 @@ p {
       word-wrap: break-word;
       white-space: normal;
       word-break: break-all; }
-  .profession-card {
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
-    transform-style: preserve-3d; }
-    .profession-card-font {
-      float: left;
-      margin-right: -100%;
-      width: 100%;
-      transition: -webkit-transform 0.4s ease-in-out;
-      transition: transform 0.4s ease-in-out;
-      transform-origin: left center; }
-    .profession-card-back {
-      float: left;
-      margin-right: -100%;
-      width: 100%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      transition: -webkit-transform 0.4s ease-in-out;
-      transition: transform 0.4s ease-in-out;
-      transform-origin: right center;
-      transform: translateX(-100%) rotateY(-180deg); }
-  .profession-card:hover .profession-card-font {
-    transform: translateX(100%) rotateY(180deg); }
-  .profession-card:hover .profession-card-back {
-    transform: translateX(0) rotateY(0); }
 
 .navbar-nav {
   display: flex;
@@ -2538,6 +2534,7 @@ p {
   margin: 0 0.5em; }
   .popover .arrow::before, .popover .arrow::after {
     position: absolute;
+    left: 0.3em;
     display: block;
     content: "";
     border-color: transparent;

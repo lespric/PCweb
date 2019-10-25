@@ -1,22 +1,22 @@
 @charset "utf-8";
 
 .nav {
-    @include flex-justify-between;
-    @include flex-align-center;
-    flex-wrap: wrap;
-    padding: 0 18.75%;
-    width: 100%;
+  @include flex-justify-between;
+  @include flex-align-center;
+  flex-wrap: wrap;
+  padding: 0 18.75%;
+  width: 100%;
 
-    background-color: $color-primary;
+  background-color: $color-primary;
 
-    &-brand {
-        display: inline-block;
-        width: 2.7em;
-        height: 1.2em;
+  &-brand {
+    display: inline-block;
+    width: 2.7em;
+    height: 1.2em;
 
-        background: url(../img/cooperative/brand@2x.png) no-repeat;
-        background-size: cover;
-        cursor: pointer;
-    } // 定义导航栏的品牌图片
+    background: url(../img/cooperative/brand@2x.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  } // 定义导航栏的品牌图片
 }
 // 定义导航栏的布局和背景样式

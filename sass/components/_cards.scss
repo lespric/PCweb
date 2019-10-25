@@ -225,6 +225,8 @@
   border-radius: 0.1em;
   background-color: $color-light;
   @include box-shadow;
+  @include transform-3d;
+  // 定义职业选择区的卡片在悬浮状态的3d翻转效果
 
   &-header {
     padding: 0.4em 0.2em;
@@ -271,9 +273,6 @@
     height: 100%;
     background-color: $color-msg-bg;
 
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-
     &-title {
       color: $color-light;
       text-align: center;
@@ -289,16 +288,5 @@
     }
   }
   // 定义职业选择区的卡片的提示信息
-
-  & {
-    @include transform-3d;
-  }
-  &:hover  &-font {
-    transform: translateX(100%) rotateY(180deg);
-  }
-  &:hover  &-back {
-    transform: translateX(0) rotateY(0);
-  }
-  // 定义职业选择区的卡片在悬浮状态的3d翻转效果
 }
 // 定义职业选择区的卡片的样式和布局

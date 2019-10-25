@@ -271,7 +271,7 @@
         </article>
       <!--战略合作企业介绍区-->
 
-      <a class="profession-backtop">
+      <a class="backtop">
           <span
             class="glyphicon glyphicon-eject"
             aria-hidden="true"
@@ -335,11 +335,11 @@
         $(function() {
         $(window).scroll(function() {
           if ($(window).scrollTop() > 0 ) 
-          $(".profession-backtop").fadeIn();
+          $(".backtop").fadeIn();
           else 
-          $(".profession-backtop").fadeOut();
+          $(".backtop").fadeOut();
         }); // 当滚动值大于0时，即有滚动时，返回顶部按钮就会渐显
-        $(".profession-backtop").click(function() {
+        $(".backtop").click(function() {
           $("html, body").animate({ scrollTop: 0 }, 500);
         }); // 给返回顶部按钮一个点击事件，即为改变滚动值为0的动画，且动画时间为500ms
       });

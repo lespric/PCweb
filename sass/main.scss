@@ -8,7 +8,7 @@ sass/
 |   |– _variables.scss    # Sass Variables
 |   |– _mixins.scss       # Sass Mixins
 |   |– _placeholder.scss  # Sass Placeholder
-|   |– _functions.scss     # Sass Functions
+|   |– _functions.scss    # Sass Functions
 |
 |– base/
 |   |– _reset.scss        # Reset
@@ -18,13 +18,12 @@ sass/
 |
 |– components/
 |   |– _buttons.scss      # Buttons
-|   |– _list.scss         # List-group
-|   |– _forms.scss        # Form & input
+|   |– _lists.scss        # List-group
 |   |– _cards.scss        # Cards
-|   |– _nav.scss          # Nav
+|   |– _navs.scss         # Navs
 |   |– _breadcrumb.scss   # Breadcrumb
 |   |– _scrollspy.scss    # Scrollspy
-|   |– _table.scss        # Table
+|   |– _tables.scss       # Tables
 |
 |– layout/
 |   |– _body.scss         # Body
@@ -43,7 +42,6 @@ sass/
 |   |– _carousel.scss     # Carousel
 |   |– _collapse.scss     # Collapse
 |   |– _popover.scss      # Popover
-|   |– _scrollspy.scss    # Scrollspy
 |
 `– main.scss              # Main Sass file
 */
@@ -76,12 +74,11 @@ sass/
 @import
   "components/buttons",
   "components/lists",
-  "components/forms",
   "components/cards",
-  "components/nav",
+  "components/navs",
   "components/breadcrumb",
   "components/scrollspy",
-  "components/table";
+  "components/tables";
 
 @import
   "vendors-extensions/carousel",

@@ -129,6 +129,11 @@
     opacity: $new-opacity;
   }
 }
+@mixin btn-hover-darken($btn-bg, $darken-deg: 20%) {
+  &:hover {
+    background-color: darken($btn-bg, $darken-deg)
+  }
+}
 // 声明按钮的悬浮状态的混合宏
 
 @mixin box-shadow($offset: 0.25em, $effect: 0.75em) {
