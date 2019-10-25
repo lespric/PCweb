@@ -2529,12 +2529,11 @@ p {
 .popover .arrow {
   position: absolute;
   display: block;
+  margin-left: 0.6em;
   width: 1em;
-  height: 0.5em;
-  margin: 0 0.5em; }
+  height: 0.5em; }
   .popover .arrow::before, .popover .arrow::after {
     position: absolute;
-    left: 0.3em;
     display: block;
     content: "";
     border-color: transparent;
@@ -2584,6 +2583,7 @@ p {
   left: 50%;
   display: block;
   width: 1rem;
+  margin-left: -0.5rem;
   content: "";
   border-bottom: 1px solid #f7f7f7; }
 
