@@ -33,7 +33,7 @@
   bottom: 2em;
   right: 2em;
 
-  @include flex-justify-center;
+  @include flex-center;
   width: 2em;
   height: 2em;
   min-width: 48px;
@@ -43,24 +43,8 @@
   background-color: $color-primary;
   @include box-shadow;
 
-  &-icon {
-    display: inline-block;
-    margin-top: 0.5em;
-    width: 0;
-    height: 0;
-
-    border: 0.5em solid transparent;
-    border-bottom: 0.5em solid $color-light;
-    border-top: none;
-
-    &:after {
-      @include absolute-justify-center;
-      top: 1.2em;
-      content: "";
-      display: inline-block;
-      width: 1em;
-      border-top: 0.2em solid $color-light;
-    }
+  & .glyphicon-eject {
+    font-size: 1.5rem;
   } // 定义返回顶部按钮的图标
 }
 // 定义返回顶部按钮的布局和样式

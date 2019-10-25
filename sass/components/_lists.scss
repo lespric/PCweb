@@ -29,6 +29,7 @@
 
   &-text {
     width: 100%;
+    height: 2.4em;
     max-width: 150px;
 
     @include flex-align-center;
